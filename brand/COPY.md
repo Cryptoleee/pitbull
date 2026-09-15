@@ -3,6 +3,18 @@
 Voice: hype, short lines, one word per punch. The creature is a *rising star*: horns, aviators, arms, a
 grin. English on X; never claim affiliation with any real person.
 
+## Files
+
+| Slot | File |
+|---|---|
+| X banner (1500×500) | `brand/posters/banner.jpg` |
+| X pfp | `web/public/assets/pitbull-pfp.png` (512) / `brand/pitbull-pfp-crop.png` (1024) |
+| Post 1 image | `brand/posters/post1-meet.jpg` |
+| Post 2 image | `brand/posters/post2-prophecy.jpg` |
+| Post 3 image | `brand/posters/post3-star.jpg` |
+| Hype video (typography cut, silent) | `brand/video/pitbull-announcement.mp4` |
+| Hype video (H3 motion cut, with sound) | `brand/video/pitbull-hype.mp4` |
+
 ## Bio (X, ≤160 chars)
 
 ```

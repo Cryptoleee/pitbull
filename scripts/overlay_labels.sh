@@ -4,7 +4,7 @@
 # 0.25 s alpha fade in/out. SCALE is relative to the label's own size (0.8 puts a ~650 px sticker at
 # ~520 px on a 1344 px frame). Default position is the top-left corner (30,24); pass x:y to stack.
 set -euo pipefail
-FF=$(python3 -c "import imageio_ffmpeg as f; print(f.get_ffmpeg_exe())")
+FF=$(command -v ffmpeg || python3 -c "import imageio_ffmpeg as f; print(f.get_ffmpeg_exe())")
 IN=$1; OUT=$2; SC=$3; shift 3
 INPUTS=(-i "$IN"); FC=""; PREV="0:v"; i=1
 for spec in "$@"; do

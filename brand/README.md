@@ -11,6 +11,7 @@ gold (#e2a63a) on near-black (#0d0b08).
 |---|---|---|---|
 | `pitbull-ref.jpg` | the reference creature, supplied by the owner | 2048×2048 | upload |
 | `pitbull-pfp-crop.png` | pfp crop of the reference (head, horns, arms) | 1024×1024 | Chromium canvas crop |
+| `pitbull-road.png` | the creature on the road at golden hour, GPT Image 2.5 from the pfp crop (the full reference is refused by moderation; the head-and-arms crop passes) | 1344×752 | Magnific |
 | `COPY.md` | X bio, launch posts, video script, prompt plan | — | written |
 | `posters/banner.png/.jpg` | X banner: the creature left, "$PITBULL", tagline, chain pill | 1500×500 | `posters/banner.html` over the reference, rendered with `scripts/render_poster.mjs` |
 | `posters/post1-meet.png/.jpg` | post 1 "Meet the Pitbull" | 1920×1080 | HTML/CSS over the reference |
