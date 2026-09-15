@@ -69,14 +69,30 @@ npm --prefix web ci && VITE_WS_URL=ws://127.0.0.1:8080/ws npm --prefix web run d
 
 ## Deploy
 
-See `.claude/skills/robinhood-launch/references/deploy.md`. Railway service with root `server` and a
-volume; Vercel from the repo root (`vercel.json` builds `web/`). Server env (prelaunch):
+### 1. Vercel (the site) — no environment variables needed to go live
+
+New Project → Import `Cryptoleee/pitbull` → **Framework Preset: Other**, **Root Directory: `./`** (leave it
+alone) → Deploy. The root `vercel.json` does the rest (`npm run build` → `web/dist`). Without a WebSocket
+server the site serves the launching-soon page, so the first deploy is safe to make public.
+
+Optional project variables (Settings → Environment Variables, then redeploy — Vite bakes these at build time):
+
+```
+VITE_SITE_URL="https://thepitbull.fun"      # used for the link-preview image URL; set to the live URL you use
+VITE_X_URL="https://x.com/thepitbullfun"    # the X handle once it is claimed
+VITE_BUY_URL="https://www.ponsfamily.com"   # the Pons token page after launch
+VITE_WS_URL="wss://<railway-domain>/ws"     # at launch: connects the shrine to the chain watcher
+```
+
+### 2. Railway (the chain watcher)
+
+New Project → Deploy from GitHub repo `Cryptoleee/pitbull` → **Root Directory: `server`** (the Dockerfile is
+picked up) → add a **Volume** (any mount path) so state survives redeploys → Variables → Raw editor → paste:
 
 ```
 PRELAUNCH="1"
 LAUNCH_NAME="Pitbull"
 LAUNCH_SYMBOL="PITBULL"
-LAUNCH_AT="2026-09-20T18:00:00Z"
 CHAIN_ID="4663"
 CHAIN_NAME="Robinhood Chain"
 DEXSCREENER_CHAIN="robinhood"
@@ -91,13 +107,18 @@ POLL_MS="1500"
 MARKET_REFRESH_MS="30000"
 DEMO="0"
 PORT="8080"
-ADMIN_TOKEN="a-long-random-string"
+ADMIN_TOKEN="change-this-to-a-long-random-string"
 ```
 
-At launch: remove `PRELAUNCH`, set `TOKEN_ADDRESS="0x..."` (and `START_BLOCK` when deploying more than an
-hour after launch), save, check `/health` for `pons.launchBlock` and the curve pool. Web env:
-`VITE_WS_URL=wss://<railway-domain>/ws`, `VITE_X_URL`, `VITE_BUY_URL` (the Pons token page),
-`VITE_SITE_URL`, optional `VITE_PRELAUNCH=1`.
+Then Settings → Networking → Generate Domain, and put `VITE_WS_URL="wss://<that-domain>/ws"` in Vercel.
+Check `https://<that-domain>/health`: `ok: true`, `prelaunch: true`.
+
+### 3. At launch
+
+Railway: remove `PRELAUNCH`, set `TOKEN_ADDRESS="0x..."` (and `START_BLOCK` when deploying more than an hour
+after launch). Watch the logs for `launch found at block`, `replaying trades`, `[trade]`. Then check
+`/health` for `pons.launchBlock` and the curve pool, and the site flips from launching-soon to the live
+shrine by itself.
 
 ## Disclaimer
 

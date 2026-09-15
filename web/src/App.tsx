@@ -18,7 +18,8 @@ const STREAM = params.get('stream') === '1';
 
 export function App() {
   const shrine = useShrine();
-  const prelaunch = shrine.prelaunch || FORCE_PRELAUNCH || (!shrine.ready && shrine.status === 'offline');
+  // Launching-soon until the chain server says otherwise: no server (or no token yet) means no numbers.
+  const prelaunch = shrine.prelaunch || FORCE_PRELAUNCH || !shrine.ready;
 
   useEffect(() => {
     const symbol = shrine.token?.symbol || 'PITBULL';

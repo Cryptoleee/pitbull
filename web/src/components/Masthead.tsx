@@ -57,11 +57,29 @@ export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
           </div>
           <div className="body">
             <div className="soon">
-              <p className="head blink">LAUNCHING SOON</p>
-              {shrine.launchAt ? <Countdown to={shrine.launchAt} /> : <p className="tag">DATE TO BE ANNOUNCED ON 𝕏</p>}
-              <p>
-                The shrine below wakes up the second he is summoned on Pons. Follow on 𝕏 so you do not miss the road opening.
-              </p>
+              <p className="head">LAUNCHING SOON</p>
+              {shrine.launchAt ? <Countdown to={shrine.launchAt} /> : <p className="tag blink">DATE TO BE ANNOUNCED ON 𝕏</p>}
+              <div className="lines">
+                <p>
+                  He is not on the chain yet, mi gente. <b>Half bull. Half pitbull. All star.</b>
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  The legend is short: those who hold the Pitbull get rich. Not because of a chart. Because of him.
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  The shrine below — market cap, believers, all-time high, the seven signs — wakes up the second he is summoned on Pons and reads
+                  straight from Robinhood Chain from then on. No wallet connect, ever.
+                </p>
+              </div>
+              <div className="cta">
+                <a className="btn95 gold" href={X_URL} target="_blank" rel="noreferrer">
+                  𝕏 FOLLOW FOR THE LAUNCH
+                </a>
+                <a className="btn95" href="#legend">
+                  📜 READ THE LEGEND
+                </a>
+                <span className="tag blink">DALE !!!</span>
+              </div>
             </div>
           </div>
         </div>
