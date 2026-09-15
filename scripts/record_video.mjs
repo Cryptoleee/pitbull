@@ -1,4 +1,4 @@
-// record_video.mjs <page.html> <out.mp4> <seconds> [audio.mp4]
+// record_video.mjs <page.html> <out.mp4> <seconds> [audio.mp4] [width] [height]
 // Records an HTML animation with Chromium and transcodes it to H.264 for X. The page must expose
 // window.startShow() (it unpauses every animation and plays its <video>); the recording starts a beat
 // earlier, so the measured pre-roll is trimmed off and the optional audio track lines up with frame 0.
@@ -7,14 +7,14 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const [html, out, secs, audio] = process.argv.slice(2);
+const [html, out, secs, audio, w = '1920', h = '1080'] = process.argv.slice(2);
 const dir = fs.mkdtempSync('/tmp/rec-');
 const browser = await chromium.launch({
   executablePath: '/opt/pw-browsers/chromium',
   args: ['--no-sandbox', '--ignore-certificate-errors', '--autoplay-policy=no-user-gesture-required'],
 });
 const t0 = Date.now();
-const ctx = await browser.newContext({ viewport: { width: 1920, height: 1080 }, recordVideo: { dir, size: { width: 1920, height: 1080 } } });
+const ctx = await browser.newContext({ viewport: { width: +w, height: +h }, recordVideo: { dir, size: { width: +w, height: +h } } });
 const page = await ctx.newPage();
 page.on('console', (m) => m.type() === 'error' && console.log('[page]', m.text()));
 await page.goto('file://' + path.resolve(html), { waitUntil: 'networkidle', timeout: 60000 });

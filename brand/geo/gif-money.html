@@ -1,0 +1,39 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+/* 800x800 loop for X: 4s, seamless, no text that needs reading twice. */
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 800px; height: 800px; overflow: hidden; }
+.m { position: relative; width: 800px; height: 800px; overflow: hidden; background: #0a0a14; }
+.heaven { position: absolute; inset: 0; background: radial-gradient(circle at 50% 46%, #ffe9a8 0%, #ffc44d 26%, #e08a1e 54%, #6b3a06 100%); }
+.rays { z-index: 2; animation: geo-spin 8s linear infinite; }
+.halo { z-index: 3; animation: halo 1.6s ease-in-out infinite alternate; }
+@keyframes halo { from { opacity: .55; } to { opacity: 1; } }
+.fig { position: absolute; left: 50%; bottom: 56px; transform: translateX(-50%); height: 66%; z-index: 5; filter: drop-shadow(0 0 26px rgba(255,255,255,.5)); animation: bob 1.3s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translate(-50%, 0) scale(1); } to { transform: translate(-50%, -14px) scale(1.015); } }
+.title { position: absolute; left: 0; right: 0; top: 18px; text-align: center; z-index: 8; }
+.title .wordart { font-size: 92px; }
+.title .wordart .fill { background-image: linear-gradient(180deg, #fff, #fff09a 40%, #ffd700 72%, #ff8c00); }
+.dale { position: absolute; right: 26px; bottom: 96px; z-index: 9; transform: rotate(-11deg); animation: geo-blink 1s steps(1, end) infinite; }
+.dale .wordart { font-size: 86px; }
+.bar { position: absolute; left: 0; right: 0; bottom: 0; height: 56px; background: #000080; border-top: 3px solid #fff; overflow: hidden; z-index: 9; }
+.bar span { display: inline-block; white-space: nowrap; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; color: #ffff00; line-height: 53px; animation: slide 4s linear infinite; }
+.bar span i { font-style: normal; padding-right: 2.5em; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 14px; border-width: 0 0 2px; z-index: 10; }
+.pile { position: absolute; left: 0; right: 0; bottom: 40px; height: 170px; z-index: 6; }
+</style></head><body><div class="m">
+<div class="heaven"></div><div class="rays"></div><div class="halo"></div>
+<div class="pile" id="pile"></div>
+<img class="fig" src="cutout.png">
+<div class="fx" id="fx" style="z-index:7"></div>
+<div class="construction t"></div>
+<div class="title"><div class="wordart"><span class="ext">$PITBULL</span><span class="fill">$PITBULL</span></div></div>
+<div class="dale"><div class="wordart"><span class="ext">DALE.</span><span class="fill">DALE.</span></div></div>
+<div class="bar"><span><i>*** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** thepitbull.fun ***</i><i>*** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** thepitbull.fun ***</i></span></div>
+<script src="geo-fx.js"></script>
+<script>
+geoPile('#pile', 16, 14, { min: 42, max: 72, rows: 3, step: 34 });
+geoRain('#fx', 22, 61, { min: 30, max: 76, fall: true, delay: -6, spread: 4, dMin: 2, dMax: 4, coins: 0.3 });
+geoSparkles('#fx', 8, 3, { avoid: [{ x0: 26, y0: 26, x1: 74, y1: 86 }] });
+window.startShow = () => document.documentElement.classList.remove('hold');
+</script>
+</div></body></html>

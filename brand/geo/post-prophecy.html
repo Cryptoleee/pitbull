@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.top { position: absolute; left: 0; right: 0; top: 30px; text-align: center; z-index: 8; }
+.top .wordart { font-size: 150px; }
+.top .sub { margin-top: 6px; }
+.top .sub span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 23px; color: #fff; background: #000080; border: 3px solid #fff; padding: 4px 14px; }
+.win.signs { position: absolute; left: 48px; right: 48px; top: 262px; z-index: 6; }
+.win.signs .bar { font-size: 19px; }
+table { width: 100%; border-collapse: collapse; font-family: 'Arimo', Arial, sans-serif; background: #fff; }
+td { border-bottom: 2px dotted #999; padding: 11px 12px; }
+td.cap { font-family: 'Anton', Impact, sans-serif; font-size: 34px; color: #b00000; width: 150px; }
+td.nm { font-family: 'Anton', Impact, sans-serif; font-size: 34px; }
+td.st { text-align: right; font-weight: 700; font-size: 17px; color: #808080; width: 150px; }
+tr.first { background: linear-gradient(90deg, #ffe9a8, #fff8e1); }
+tr.first td.cap, tr.first td.nm { color: #8a5a00; }
+tr.first td.st { color: #b00000; }
+.strip { position: absolute; left: 48px; right: 48px; top: 880px; z-index: 6; background: #000080; border-top: 3px solid #fff; border-bottom: 3px solid #808080; padding: 8px 14px; overflow: hidden; }
+.strip span { display: block; white-space: nowrap; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 22px; color: #ffff00; }
+.cut { position: absolute; right: 8px; bottom: 96px; width: 300px; z-index: 7; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.3)); }
+.foot { position: absolute; left: 44px; bottom: 60px; z-index: 9; }
+.foot .u { font-family: 'Anton', Impact, sans-serif; font-size: 54px; color: #ffff00; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 20px #ff00c8; }
+.foot .t { display: block; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 20px; color: #000080; background: #ffff00; border: 2px solid #000; padding: 3px 10px; margin-top: 8px; }
+</style></head><body><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.4"></div>
+<div class="fx" id="fxback" style="z-index:2"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top">
+  <div class="wordart"><span class="ext">THE PROPHECY</span><span class="fill">THE PROPHECY</span></div>
+  <div class="sub"><span>7 SIGNS &nbsp;*&nbsp; UNLOCKED BY MARKET CAP &nbsp;*&nbsp; NEVER LOST AGAIN</span></div>
+</div>
+<div class="win signs">
+  <div class="bar"><span>PROPHECY.EXE - written on a road nobody drives</span><span class="btns"><i>_</i><i>X</i></span></div>
+  <div class="body" style="padding:0">
+    <table>
+      <tr class="first"><td class="cap">$50K</td><td class="nm">The Sighting</td><td class="st">FIRST SIGN</td></tr>
+      <tr><td class="cap">$250K</td><td class="nm">The Awakening</td><td class="st">waiting</td></tr>
+      <tr><td class="cap">$1M</td><td class="nm">The Flex</td><td class="st">waiting</td></tr>
+      <tr><td class="cap">$5M</td><td class="nm">Mr. Wealthwide</td><td class="st">waiting</td></tr>
+      <tr><td class="cap">$25M</td><td class="nm">The Stampede</td><td class="st">waiting</td></tr>
+      <tr><td class="cap">$100M</td><td class="nm">Worldwide</td><td class="st">waiting</td></tr>
+      <tr><td class="cap">$1B</td><td class="nm">DALE.</td><td class="st">waiting</td></tr>
+    </table>
+  </div>
+</div>
+<div class="strip"><span>*** THOSE WHO HOLD THE PITBULL GET RICH *** NOT BECAUSE OF A CHART *** BECAUSE OF HIM ***</span></div>
+<img class="cut" src="cutout.png">
+<div class="foot"><span class="u">thepitbull.fun</span><span class="t">WATCH THEM UNLOCK LIVE ON THE SHRINE</span></div>
+<div class="fx" id="fxfront" style="z-index:8"></div>
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#fxback', 24, 31, { min: 42, max: 124 });
+geoRain('#fxfront', 7, 88, { min: 36, max: 84, avoid: [{ x0: 2, y0: 20, x1: 98, y1: 80 }] });
+geoSparkles('#fxfront', 9, 14, { avoid: [{ x0: 4, y0: 22, x1: 96, y1: 78 }] });
+</script>
+</div></body></html>

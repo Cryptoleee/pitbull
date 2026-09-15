@@ -21,6 +21,10 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 | Wealth: he brings wealth | `brand/geo/wealth1-blessing.jpg` |
 | Wealth: jackpot | `brand/geo/wealth2-jackpot.jpg` |
 | Wealth: wealth incoming | `brand/geo/wealth3-transfer.jpg` |
+| Site is live | `brand/geo/post-shrine-open.jpg` |
+| The prophecy (7 signs) | `brand/geo/post-prophecy.jpg` |
+| Get chosen (4 steps) | `brand/geo/post-getchosen.jpg` |
+| Money loop | `brand/gif/pitbull-money.gif` (and `.mp4`) |
 | Photoreal posters (pre-Geocities, still usable) | `brand/posters/post1-meet.jpg`, `post2-prophecy.jpg`, `post3-star.jpg` |
 
 ## Bio (138 chars)
@@ -166,7 +170,50 @@ Do not turn off your computer. DO NOT SELL.
 $PITBULL 🐂🕶️ thepitbull.fun
 ```
 
-## 8. Photoreal posters (optional, no Geocities frame)
+## 8. The prophecy (`geo/post-prophecy.jpg`)
+
+```
+7 signs, mi gente. Carved on a road nobody drives. 🐂🕶️
+
+$50K The Sighting
+$250K The Awakening
+$1M The Flex
+$5M Mr. Wealthwide
+$25M The Stampede
+$100M Worldwide
+$1B DALE.
+
+Each one unlocks at an all-time-high market cap and is never lost again — watch them light up live on thepitbull.fun
+
+$PITBULL · Robinhood Chain via @ponsfamily
+```
+
+## 9. Get chosen (`geo/post-getchosen.jpg`)
+
+```
+How to get chosen, familia. 4 steps 🐂🕶️
+
+1. A wallet on Robinhood Chain (chain id 4663)
+2. ETH on Robinhood Chain — gas is tiny
+3. Get $PITBULL on Pons
+4. Hold. That's the whole strategy.
+
+You don't buy the Pitbull. You get chosen.
+thepitbull.fun · DALE.
+```
+
+## 10. The money loop (`gif/pitbull-money.gif`)
+
+```
+Eyoooo 💰🐂🕶️
+
+The mythical creature that brings wealth.
+Still on that road. Still flexing. Still waiting for you, mi gente.
+
+$PITBULL · thepitbull.fun · DALE.
+```
+
+## 11. Photoreal posters (optional, no Geocities frame)
 
 **Meet the Pitbull** (`posters/post1-meet.jpg`)
 ```
@@ -203,7 +250,7 @@ DALE. 🔥
 $PITBULL — Robinhood Chain via @ponsfamily · thepitbull.fun
 ```
 
-## 9. The site is live (`geo/og.jpg` auto-previews)
+## 12. The site is live (`geo/post-shrine-open.jpg`)
 
 ```
 Eyoooo. THE SHRINE IS OPEN. 🐂🕶️
@@ -218,7 +265,7 @@ Best viewed in Netscape Navigator 4.0 at 800x600. 😎
 $PITBULL via @ponsfamily · DALE.
 ```
 
-## Reply / community lines (keep in the notes app)
+## 13. Reply / community lines (keep in the notes app)
 
 - `DALE.`
 - `Eyoooo 🐂🕶️`

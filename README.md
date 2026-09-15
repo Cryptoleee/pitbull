@@ -57,7 +57,7 @@ pitbull/
 
 - `PRELAUNCH=1` – no chain reads; the site shows *launching soon* with a countdown when `LAUNCH_AT` is set.
 - `DEMO=1` – synthetic trades, holders and a random-walk price, for screenshots and rehearsals.
-- `?stream=1` on the site – a 1920×1080 broadcast frame for OBS or the `stream/` service.
+- `?stream=1` on the site – a 1920×1080 presentation frame (big screen, OBS, screenshots). There is no livestream service in this project.
 
 ## Run locally
 

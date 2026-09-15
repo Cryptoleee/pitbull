@@ -30,3 +30,8 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `video/pitbull-hype-geocities.mp4` | hype video: the H3 footage inside a Netscape window with the full Geocities chaos on top (popups, falling money, marquee, taskbar, WordArt slam, DALE stamp), H3 audio | 1920×1080 30 fps, 10 s | `geo/video-chaos.html` recorded with `scripts/record_video.mjs` |
 | `geo/hype.webm` | VP9 copy of the H3 clip (Chromium for Testing has no H.264, so the page needs webm) | 1344×768 | ffmpeg |
 | `geo/og.png/.jpg` | link preview card (also `web/public/assets/og.jpg`) | 1200×630 | `geo/og.html` |
+| `geo/post-shrine-open.png/.jpg` | post: the live site inside a Netscape window, "THE SHRINE IS OPEN" | 1200×1200 | `geo/post-shrine-open.html` over `geo/site-shot.png` |
+| `geo/post-prophecy.png/.jpg` | post: the seven signs as a PROPHECY.EXE table | 1200×1200 | `geo/post-prophecy.html` |
+| `geo/post-getchosen.png/.jpg` | post: how to get chosen in 4 steps | 1200×1200 | `geo/post-getchosen.html` |
+| `gif/pitbull-money.gif` | 4 s loop: god rays, falling money, DALE. blink, scrolling bar (`.mp4` uploads cleaner on X) | 480×480 12 fps | `geo/gif-money.html` recorded with `scripts/record_video.mjs` + `scripts/togif.sh` |
+| `geo/site-shot.png` | screenshot of the live site, used inside the post frame | 1280×800 | Playwright on thepitbull.fun |

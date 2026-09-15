@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.top { position: absolute; left: 0; right: 0; top: 34px; text-align: center; z-index: 8; }
+.top .wordart { font-size: 148px; }
+.top .sub { margin-top: 8px; }
+.top .sub span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 24px; color: #f00; background: #ffff00; border: 3px solid #000; padding: 4px 14px; }
+.steps { position: absolute; left: 48px; right: 48px; top: 252px; z-index: 6; display: flex; flex-direction: column; gap: 18px; }
+.step h3 { line-height: 1.15; }
+.bubble { position: absolute; left: 48px; bottom: 188px; width: 520px; z-index: 8; background: #fff; border: 4px solid #000; border-radius: 22px; padding: 14px 18px; box-shadow: 6px 6px 0 rgba(0,0,0,.4); }
+.bubble .comic { font-size: 30px; }
+.bubble::after { content: ''; position: absolute; right: 54px; bottom: -32px; width: 0; height: 0; border: 17px solid transparent; border-top-color: #000; }
+.step { display: flex; gap: 16px; align-items: flex-start; background: #c0c0c0; border: 4px outset #f0f0f0; padding: 16px; box-shadow: 5px 5px 0 rgba(0,0,0,.35); }
+.step .n { flex: none; width: 54px; height: 54px; display: grid; place-items: center; background: #ffd700; border: 4px outset #fff3a0; font-family: 'Anton', Impact, sans-serif; font-size: 32px; color: #6b3a06; }
+.step h3 { margin: 0; font-family: 'Arimo', Arial, sans-serif; font-size: 27px; color: #000; }
+.step p { margin: 4px 0 0; font-family: 'Arimo', Arial, sans-serif; font-size: 19px; color: #202020; }
+.cut { position: absolute; right: 6px; bottom: 96px; width: 340px; z-index: 7; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.3)); }
+.foot { position: absolute; left: 48px; bottom: 56px; z-index: 9; }
+.foot .u { font-family: 'Anton', Impact, sans-serif; font-size: 58px; color: #ffff00; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 20px #ff00c8; }
+.foot .t { display: block; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 19px; color: #000080; background: #fff; border: 2px solid #000; padding: 3px 10px; margin-top: 8px; }
+</style></head><body><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.4"></div>
+<div class="fx" id="fxback" style="z-index:2"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top">
+  <div class="wordart"><span class="ext">GET CHOSEN</span><span class="fill">GET CHOSEN</span></div>
+  <div class="sub"><span>4 STEPS &nbsp;*&nbsp; NO WALLET CONNECT ON THE SITE, EVER</span></div>
+</div>
+<div class="steps">
+  <div class="step"><span class="n">1</span><div><h3>A wallet on Robinhood Chain</h3><p>Phantom or any EVM wallet. Add Robinhood Chain (chain id 4663) if it is not in the list yet.</p></div></div>
+  <div class="step"><span class="n">2</span><div><h3>ETH on Robinhood Chain</h3><p>Send ETH to the wallet and swap or bridge it to Robinhood Chain. Gas is tiny.</p></div></div>
+  <div class="step"><span class="n">3</span><div><h3>Get $PITBULL on Pons</h3><p>Buy on the Pons page. After graduation it trades on Uniswap on Robinhood Chain.</p></div></div>
+  <div class="step"><span class="n">4</span><div><h3>Hold</h3><p>That is the whole strategy, familia. The Pitbull does the rest.</p></div></div>
+</div>
+<div class="bubble"><div class="comic">you don't buy the Pitbull, mi gente.<br><b>you get chosen.</b></div></div>
+<img class="cut" src="cutout.png">
+<div class="foot"><span class="u">thepitbull.fun</span><span class="t">$PITBULL &nbsp;*&nbsp; ROBINHOOD CHAIN via PONS &nbsp;*&nbsp; DALE.</span></div>
+<div class="fx" id="fxfront" style="z-index:8"></div>
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#fxback', 24, 9, { min: 42, max: 124 });
+geoRain('#fxfront', 7, 45, { min: 36, max: 84, avoid: [{ x0: 2, y0: 20, x1: 98, y1: 82 }] });
+geoSparkles('#fxfront', 9, 71, { avoid: [{ x0: 4, y0: 22, x1: 96, y1: 80 }] });
+</script>
+</div></body></html>
