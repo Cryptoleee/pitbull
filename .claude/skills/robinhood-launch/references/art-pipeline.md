@@ -66,3 +66,19 @@ animation recorded with `scripts/record_video.mjs page.html out.mp4 seconds` (Ch
 H.264; the first ~0.9 s are blank Chromium frames and are trimmed). Neither needs Magnific credits, and the
 creature is pixel-identical. The system `ffmpeg` (apt) is needed for JPEG/H.264; Playwright's bundled
 `ffmpeg-linux` only knows webm/vp8.
+
+## Recording HTML animations (the trap that costs an hour)
+
+Chromium's recorded frame is **~86px shorter than the viewport** in this sandbox; the missing strip comes
+back as a grey bar at the bottom of the video, and a square viewport is padded the same way (720²–1200²
+all fail). Ask for `height + 86` and crop the frame back:
+
+- 16:9 video: `scripts/record_video.mjs page.html out.mp4 seconds [audio.mp4] [w] [h]` — viewport `w × (h+86)`, crops `w:h:0:0`.
+- Square loop: `scripts/record_gif.mjs page.html outbase seconds [square=1080] [out=480] [fps=12]` — writes both `.gif` and `.mp4` (upload the mp4 on X, it is a third of the size).
+
+Two more rules for loops: give every animation a duration that divides the loop length (4s loop → 1s, 2s
+or 4s animations, and `dMin: 4, dMax: 4` on falling money) or the GIF visibly jumps at the seam, and never
+put the cashtag on a `blink` — half the frames would be missing it.
+
+Write page JS through Python or a quoted heredoc. An unquoted bash heredoc eats `'` and `${...}`, which
+silently produced pages with no rain, frozen clocks and empty charts.
