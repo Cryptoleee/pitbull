@@ -63,8 +63,9 @@ code { font-family: ui-monospace, 'Courier New', monospace; }
 @keyframes blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
 
 .marquee { overflow: hidden; white-space: nowrap; }
-.marquee > span { display: inline-block; padding-left: 100%; animation: marquee var(--ms, 22s) linear infinite; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+.marquee > span { display: inline-block; white-space: nowrap; animation: marquee var(--ms, 22s) linear infinite; }
+.marquee > span > i { font-style: normal; padding-right: 3em; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 .wordart { position: relative; display: inline-block; font-family: var(--display); text-transform: uppercase; line-height: .95; }
 .wordart .ext, .wordart .fill { display: block; white-space: nowrap; }

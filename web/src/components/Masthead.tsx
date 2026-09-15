@@ -104,7 +104,10 @@ export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
       </nav>
 
       <div className="topmarquee marquee" style={{ ['--ms' as string]: '26s' }}>
-        <span>{MARQUEE}</span>
+        <span>
+          <i>{MARQUEE}</i>
+          <i>{MARQUEE}</i>
+        </span>
       </div>
     </header>
   );

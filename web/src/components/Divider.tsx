@@ -6,7 +6,10 @@ export function Divider({ label, text }: { label?: string; text?: string }) {
       <div className="rainbow" />
       {text ? (
         <div className="marquee" style={{ ['--ms' as string]: '16s' }}>
-          <span>{text}</span>
+          <span>
+            <i>{text}</i>
+            <i>{text}</i>
+          </span>
         </div>
       ) : null}
       {label ? <span className="tag blink">{label}</span> : null}

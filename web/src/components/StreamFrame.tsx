@@ -14,9 +14,11 @@ export function StreamFrame({ shrine, prelaunch }: { shrine: ShrineData; prelaun
   const s = shrine.state;
   const p = shrine.price;
   const live = shrine.ready && !prelaunch;
+  const idle = 'SOON';
   const symbol = shrine.token?.symbol || 'PITBULL';
   const reached = live ? s?.prophecy ?? -1 : -1;
   const host = SITE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  const ticker = `*** $${symbol} *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF BULL - HALF PITBULL - ALL STAR *** ${host} *** DALE ***`;
   const tile = (k: string, v: string, wide = false) => (
     <div className={`stat${wide ? ' wide' : ''}`} key={k}>
       <span className="k">{k}</span>
@@ -60,10 +62,10 @@ export function StreamFrame({ shrine, prelaunch }: { shrine: ShrineData; prelaun
           </div>
           <div className="body">
             <div className="stats">
-              {tile('Market cap', live ? fmtUsd(p?.marketCapUsd, { compact: true }) : '—', true)}
-              {tile('Believers', live ? fmtInt(s?.holders) : '—')}
-              {tile('All-time high', live ? fmtUsd(s?.athMcapUsd, { compact: true }) : '—')}
-              {tile('Trades', live ? fmtInt(s?.trades) : '—', true)}
+              {tile('Market cap', live ? fmtUsd(p?.marketCapUsd, { compact: true }) : idle, true)}
+              {tile('Believers', live ? fmtInt(s?.holders) : idle)}
+              {tile('All-time high', live ? fmtUsd(s?.athMcapUsd, { compact: true }) : idle)}
+              {tile('Trades', live ? fmtInt(s?.trades) : idle, true)}
             </div>
           </div>
         </section>
@@ -90,7 +92,8 @@ export function StreamFrame({ shrine, prelaunch }: { shrine: ShrineData; prelaun
       </div>
       <div className="marquee" style={{ ['--ms' as string]: '18s' }}>
         <span>
-          *** ${symbol} *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF BULL - HALF PITBULL - ALL STAR *** {host} *** DALE ***
+          <i>{ticker}</i>
+          <i>{ticker}</i>
         </span>
       </div>
       <div className="bottombar">

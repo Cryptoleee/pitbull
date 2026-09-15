@@ -45,7 +45,7 @@ export function App() {
         <Legend />
         <Divider label="HOW TO" text="*** horns. aviators. bag. *** he doesn't watch the chart, the chart watches him *** DALE ***" />
         <GetChosen shrine={shrine} prelaunch={prelaunch} />
-        <Footer shrine={shrine} />
+        <Footer shrine={shrine} prelaunch={prelaunch} />
       </div>
       <div className="construction" />
       {shrine.toast && (

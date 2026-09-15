@@ -37,7 +37,7 @@ export function Prophecy({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
           </thead>
           <tbody>
             {shrine.milestones.map((m) => {
-              const state = m.index <= reached ? 'done' : m.index === reached + 1 ? 'next' : 'locked';
+              const state = prelaunch ? 'locked' : m.index <= reached ? 'done' : m.index === reached + 1 ? 'next' : 'locked';
               return (
                 <tr key={m.index} className={state}>
                   <td className="cap">{fmtCap(m.mcapUsd)}</td>
@@ -53,7 +53,7 @@ export function Prophecy({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
                         <span style={{ fontSize: 12 }}>{Math.round(progress * 100)}% there</span>
                       </>
                     )}
-                    {state === 'locked' && <span style={{ color: '#808080' }}>locked</span>}
+                    {state === 'locked' && <span style={{ color: '#808080' }}>{prelaunch ? 'waiting' : 'locked'}</span>}
                   </td>
                 </tr>
               );

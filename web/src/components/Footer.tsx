@@ -3,7 +3,7 @@ import { fmtInt, shortAddress } from '../lib/format';
 import { dexscreenerUrl, explorerTokenUrl, PONS_URL, X_URL } from '../lib/links';
 import type { ShrineData } from '../lib/useShrine';
 
-export function Footer({ shrine }: { shrine: ShrineData }) {
+export function Footer({ shrine, prelaunch }: { shrine: ShrineData; prelaunch: boolean }) {
   const [copied, setCopied] = useState(false);
   const t = shrine.token;
   const symbol = t?.symbol || 'PITBULL';
@@ -57,7 +57,7 @@ export function Footer({ shrine }: { shrine: ShrineData }) {
               <b key={i}>{d}</b>
             ))}
         </span>{' '}
-        &nbsp;·&nbsp; {fmtInt(shrine.state?.holders)} believers &nbsp;·&nbsp; best viewed in Netscape Navigator 4.0 at 800×600
+        &nbsp;·&nbsp; {prelaunch ? 'the shrine is still asleep' : `${fmtInt(shrine.state?.holders)} believers`} &nbsp;·&nbsp; best viewed in Netscape Navigator 4.0 at 800×600
       </p>
 
       <div className="webring">

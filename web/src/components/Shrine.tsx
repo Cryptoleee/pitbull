@@ -12,6 +12,7 @@ export function Shrine({ shrine, prelaunch }: { shrine: ShrineData; prelaunch: b
   const s = shrine.state;
   const p = shrine.price;
   const live = shrine.ready && !prelaunch;
+  const idle = 'SOON';
   const tile = (k: string, v: string, h?: string, wide = false) => (
     <div className={`stat${wide ? ' wide' : ''}`} key={k}>
       <span className="k">{k}</span>
@@ -40,13 +41,13 @@ export function Shrine({ shrine, prelaunch }: { shrine: ShrineData; prelaunch: b
           <p>{prelaunch ? 'The numbers appear the moment he is summoned.' : 'Every number below comes from the chain, not from a press release.'}</p>
         </div>
         <div className="stats">
-          {tile('Market cap', live ? fmtUsd(p?.marketCapUsd, { compact: true }) : '—', p?.derived ? 'from the bonding curve' : 'via Dexscreener', true)}
-          {tile('Believers (holders)', live ? fmtInt(s?.holders) : '—', live && s && s.peakHolders > s.holders ? `peak ${fmtInt(s.peakHolders)}` : 'wallets holding on chain')}
-          {tile('All-time high', live ? fmtUsd(s?.athMcapUsd, { compact: true }) : '—', 'market cap')}
-          {tile('Price', live ? fmtPrice(p?.usd) : '—', 'USD')}
-          {tile('24h volume', live ? fmtUsd(p?.volume24hUsd, { compact: true }) : '—')}
-          {tile('Trades since launch', live ? fmtInt(s?.trades) : '—', live && s ? `${fmtInt(s.buys)} buys / ${fmtInt(s.sells)} sells` : undefined)}
-          {tile('Since the summoning', live ? fmtAge(s?.launchedAt, now) : '—', s?.launchedAt ? new Date(s.launchedAt).toUTCString().replace(':00 GMT', ' UTC') : undefined)}
+          {tile('Market cap', live ? fmtUsd(p?.marketCapUsd, { compact: true }) : idle, live ? (p?.derived ? 'from the bonding curve' : 'via Dexscreener') : 'the moment he is summoned', true)}
+          {tile('Believers (holders)', live ? fmtInt(s?.holders) : idle, live && s && s.peakHolders > s.holders ? `peak ${fmtInt(s.peakHolders)}` : 'wallets holding on chain')}
+          {tile('All-time high', live ? fmtUsd(s?.athMcapUsd, { compact: true }) : idle, 'market cap')}
+          {tile('Price', live ? fmtPrice(p?.usd) : idle, 'USD')}
+          {tile('24h volume', live ? fmtUsd(p?.volume24hUsd, { compact: true }) : idle)}
+          {tile('Trades since launch', live ? fmtInt(s?.trades) : idle, live && s ? `${fmtInt(s.buys)} buys / ${fmtInt(s.sells)} sells` : undefined)}
+          {tile('Since the summoning', live ? fmtAge(s?.launchedAt, now) : idle, s?.launchedAt ? new Date(s.launchedAt).toUTCString().replace(':00 GMT', ' UTC') : undefined)}
         </div>
         <div className="statusline">
           <span className={`pill${shrine.status === 'online' ? '' : ' off'}`}>
