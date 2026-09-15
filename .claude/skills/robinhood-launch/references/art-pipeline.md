@@ -56,3 +56,13 @@ Every asset: PNG + JPG in `brand/`, one README line (what, size, how it was made
 - Playwright screenshots of pages that load YouTube or fonts through the proxy need `--ignore-certificate-errors`; YouTube embeds refuse to play from datacenter IPs anyway.
 - GPT renders emoji unreliably; describe icons ("a small golden trophy icon") instead.
 - Costs: ~100 credits per GPT image, ~920 per 10 s H3 video, ~3000 for a music generation (do not generate music unless asked; licensed music cannot go on the X stream).
+
+## Photoreal projects without generating the likeness (Pitbull)
+
+When the owner supplies one hero image and wants it used as-is, build the banner, posts and end card as
+HTML/CSS over that image (`brand/posters/*.html`, Anton + Inter, gold on near-black) and render them with
+Chromium (`scripts/render_poster.mjs page.html out.png W H`). A typography-only hype video is an HTML
+animation recorded with `scripts/record_video.mjs page.html out.mp4 seconds` (Chromium `recordVideo` ->
+H.264; the first ~0.9 s are blank Chromium frames and are trimmed). Neither needs Magnific credits, and the
+creature is pixel-identical. The system `ffmpeg` (apt) is needed for JPEG/H.264; Playwright's bundled
+`ffmpeg-linux` only knows webm/vp8.

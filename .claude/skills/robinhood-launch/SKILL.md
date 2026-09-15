@@ -123,3 +123,4 @@ week each.
 | Magnific download fails with TLS errors | Retry with the proxy CA bundle (`scripts/dl.sh`) |
 | H3 video stutters or ends mid-gesture | More than five beats, or the last beat did not "hold completely still"; chain segments via last frame |
 | Labels stretched over the whole frame | A label/status class collided with an existing CSS class; prefix classes |
+| Magnific: "Reference image flagged by moderation" on every generation | The reference itself is refused (Plantoshi-style cartoons never were; the photoreal Pitbull creature was, because of visible animal genitals). Upload a head-and-torso crop as the reference instead: the same face and design pass, and GPT Image 2.5 rebuilds the full body from the prompt |
