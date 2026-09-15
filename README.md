@@ -78,7 +78,7 @@ server the site serves the launching-soon page, so the first deploy is safe to m
 Optional project variables (Settings → Environment Variables, then redeploy — Vite bakes these at build time):
 
 ```
-VITE_SITE_URL="https://thepitbull.fun"      # used for the link-preview image URL; set to the live URL you use
+VITE_SITE_URL="https://thepitbull.fun"      # host shown on the stream frame (the og tags are absolute in index.html)
 VITE_X_URL="https://x.com/thepitbullfun"    # the X handle once it is claimed
 VITE_BUY_URL="https://www.ponsfamily.com"   # the Pons token page after launch
 VITE_WS_URL="wss://<railway-domain>/ws"     # at launch: connects the shrine to the chain watcher
