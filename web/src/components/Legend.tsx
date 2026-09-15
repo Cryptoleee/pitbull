@@ -18,24 +18,36 @@ const CHAPTERS = [
 
 export function Legend() {
   return (
-    <section className="pb-section pb-legend" id="legend" aria-label="the legend">
-      <div className="pb-section-head">
-        <h2>The Legend</h2>
-        <p>Three chapters. Everything else is rumour.</p>
+    <section className="win section" id="legend">
+      <div className="bar">
+        <span>LEGEND.TXT - Notepad</span>
+        <span className="btns">
+          <i>_</i>
+          <i>[]</i>
+          <i>X</i>
+        </span>
       </div>
-      <div className="pb-chapters">
-        {CHAPTERS.map((c) => (
-          <article key={c.n} className="pb-chapter">
-            <span className="pb-chapter-n">{c.n}</span>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
-          </article>
-        ))}
+      <div className="body">
+        <div className="hgroup">
+          <div className="wordart">
+            <span className="ext">The Legend</span>
+            <span className="fill">The Legend</span>
+          </div>
+          <p>Three chapters. Everything else is rumour.</p>
+        </div>
+        <div className="scroll">
+          <div className="chapters">
+            {CHAPTERS.map((c) => (
+              <article className="chapter" key={c.n}>
+                <span className="n">{c.n}</span>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="quote">&ldquo;He doesn&apos;t watch the chart. The chart watches him.&rdquo;</p>
+        </div>
       </div>
-      <blockquote className="pb-quote">
-        <p>&ldquo;He doesn&apos;t watch the chart. The chart watches him.&rdquo;</p>
-        <cite>— every believer, eventually</cite>
-      </blockquote>
     </section>
   );
 }

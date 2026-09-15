@@ -8,6 +8,11 @@ unlocked by the highest market cap ever reached.
 
 **Mechanic in one line:** *He doesn't watch the chart. The chart watches him.*
 
+The site is a deliberate 1998 Geocities homepage: tiled sky, WordArt titles, Windows 95 windows
+(`SHRINE.EXE`, `PROPHECY.EXE`, `PITBULL-CAM.AVI`), marquees, blinking tags, a visitor counter and money
+falling past the page forever. `brand/geo/` holds the same style as standalone HTML for the banner, the
+memes and the video; `web/src/styles.css` is that style as the site.
+
 | | |
 |---|---|
 | Name / ticker | Pitbull / `$PITBULL` |

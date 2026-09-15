@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.b { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+.frame.l { position: absolute; left: 26px; top: 96px; width: 330px; transform: rotate(-3deg); }
+.frame.l img { width: 306px; height: 360px; object-fit: cover; object-position: 50% 4%; }
+.mid { position: absolute; left: 372px; right: 32px; top: 56px; text-align: center; }
+.welcome { font-size: 26px; }
+.wordart { font-size: 150px; margin-top: 2px; }
+.tag { font-size: 30px; font-style: italic; font-weight: 700; margin-top: 10px; white-space: nowrap; }
+.rainbow { margin: 12px 30px 0; }
+.info { margin-top: 12px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 20px; color: #000080; }
+.info b { color: #ff0000; }
+.url { margin-top: 18px; font-family: 'Anton', Impact, sans-serif; font-size: 52px; color: #ffff00; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 20px #ff00c8; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 16px; border-width: 0 0 2px; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 16px; border-width: 2px 0 0; }
+</style></head><body><div class="b">
+<div class="sky"></div><div class="faces"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="frame l"><img src="../pitbull-ref.jpg"></div>
+<div class="mid">
+  <div class="comic glow welcome">~*~ Welcome to the Official Homepage of ~*~</div>
+  <div class="wordart"><span class="ext">$PITBULL</span><span class="fill">$PITBULL</span></div>
+  <div class="tag pink">The Mythical Creature That Brings Wealth</div>
+  <div class="rainbow"></div>
+  <div class="info">Half Bull &bull; Half Pitbull &bull; All Star &nbsp;|&nbsp; <b>ROBINHOOD CHAIN via PONS</b></div>
+  <div class="url">thepitbull.fun</div>
+  <div style="margin-top:16px"><span class="pill" style="font-size:18px"><i></i>LAUNCHING SOON &nbsp;*&nbsp; HALF BULL &nbsp;*&nbsp; HALF PITBULL &nbsp;*&nbsp; ALL STAR</span></div>
+</div>
+<div class="newburst" style="left: 300px; top: 20px;">NEW!</div>
+<div class="fx" id="fx"></div>
+<script src="geo-fx.js"></script><script>geoRain('#fx', 9, 4, { min: 34, max: 78, avoid: [{ x0: 26, y0: 4, x1: 100, y1: 86 }, { x0: 0, y0: 10, x1: 34, y1: 60 }] }); geoSparkles('#fx', 5, 3, { avoid: [{ x0: 28, y0: 8, x1: 98, y1: 80 }] });</script>
+</div></body></html>

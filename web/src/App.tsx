@@ -1,15 +1,18 @@
 import { useEffect } from 'react';
+import { Chaos } from './components/Chaos';
+import { Divider } from './components/Divider';
 import { Footer } from './components/Footer';
-import { Hero } from './components/Hero';
-import { HowToGet } from './components/HowToGet';
+import { GetChosen } from './components/GetChosen';
 import { Legend } from './components/Legend';
+import { Masthead } from './components/Masthead';
+import { PitbullCam } from './components/PitbullCam';
 import { Prophecy } from './components/Prophecy';
-import { Stats } from './components/Stats';
-import { StreamOverlay } from './components/StreamOverlay';
+import { Shrine } from './components/Shrine';
+import { StreamFrame } from './components/StreamFrame';
 import { FORCE_PRELAUNCH } from './lib/links';
 import { useShrine } from './lib/useShrine';
 
-/** Stream mode (?stream=1): a 16:9 broadcast frame with no controls, for OBS or the headless streamer. */
+/** Stream mode (?stream=1): the 16:9 broadcast frame, no page chrome. */
 const params = new URLSearchParams(window.location.search);
 const STREAM = params.get('stream') === '1';
 
@@ -19,34 +22,45 @@ export function App() {
 
   useEffect(() => {
     const symbol = shrine.token?.symbol || 'PITBULL';
-    document.title = prelaunch ? `$${symbol} — launching soon on Robinhood Chain` : `$${symbol} — the mythical creature that brings wealth`;
+    document.title = prelaunch
+      ? `$${symbol} - launching soon on Robinhood Chain`
+      : `$${symbol} - the mythical creature that brings wealth`;
   }, [prelaunch, shrine.token?.symbol]);
 
-  if (STREAM) {
-    return (
-      <div className="pb-stream">
-        <StreamOverlay shrine={shrine} prelaunch={prelaunch} />
-      </div>
-    );
-  }
+  if (STREAM) return <StreamFrame shrine={shrine} prelaunch={prelaunch} />;
 
   return (
-    <div className={`pb-app ${shrine.ready ? 'is-ready' : ''} ${prelaunch ? 'is-prelaunch' : ''}`}>
-      <Hero shrine={shrine} prelaunch={prelaunch} />
-      <main>
-        <Stats shrine={shrine} prelaunch={prelaunch} />
+    <>
+      <Chaos count={26} sparkles={10} seed={7} />
+      <div className="construction" />
+      <div className="page">
+        <Masthead shrine={shrine} prelaunch={prelaunch} />
+        <Shrine shrine={shrine} prelaunch={prelaunch} />
+        <Divider label="LIVE ON CHAIN" text="*** the numbers above update by themselves *** no refresh needed *** no wallet connect *** DALE ***" />
+        <PitbullCam shrine={shrine} prelaunch={prelaunch} />
+        <Divider label="7 SIGNS" text="*** each sign unlocks at an all-time-high market cap and is never lost again *** DALE ***" />
         <Prophecy shrine={shrine} prelaunch={prelaunch} />
+        <Divider label="THE LORE" />
         <Legend />
-        <HowToGet shrine={shrine} prelaunch={prelaunch} />
-      </main>
-      <Footer shrine={shrine} />
+        <Divider label="HOW TO" text="*** horns. aviators. bag. *** he doesn't watch the chart, the chart watches him *** DALE ***" />
+        <GetChosen shrine={shrine} prelaunch={prelaunch} />
+        <Footer shrine={shrine} />
+      </div>
+      <div className="construction" />
       {shrine.toast && (
-        <div className="pb-toast" role="status">
-          <span className="pb-toast-kicker">Prophecy fulfilled</span>
-          <strong>{shrine.toast.name}</strong>
-          <span className="pb-toast-line">{shrine.toast.line}</span>
+        <div className="win toast">
+          <div className="bar">
+            <span>PROPHECY FULFILLED !!!</span>
+            <span className="btns">
+              <i>X</i>
+            </span>
+          </div>
+          <div className="body">
+            <p className="nm">{shrine.toast.name}</p>
+            <p className="ln">{shrine.toast.line}</p>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

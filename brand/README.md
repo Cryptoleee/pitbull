@@ -29,3 +29,4 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `geo/wealth3-transfer.png/.jpg` | wealth: WEALTH.EXE transferring a fortune, 420% complete, mail from the Pitbull | 1200×1200 | `geo/wealth3-transfer.html` |
 | `video/pitbull-hype-geocities.mp4` | hype video: the H3 footage inside a Netscape window with the full Geocities chaos on top (popups, falling money, marquee, taskbar, WordArt slam, DALE stamp), H3 audio | 1920×1080 30 fps, 10 s | `geo/video-chaos.html` recorded with `scripts/record_video.mjs` |
 | `geo/hype.webm` | VP9 copy of the H3 clip (Chromium for Testing has no H.264, so the page needs webm) | 1344×768 | ffmpeg |
+| `geo/og.png/.jpg` | link preview card (also `web/public/assets/og.jpg`) | 1200×630 | `geo/og.html` |
