@@ -36,7 +36,7 @@ export function PitbullCam({ shrine, prelaunch }: { shrine: ShrineData; prelaunc
             <p className="big">He doesn&apos;t watch the chart.</p>
             <p className="big">The chart watches him.</p>
             <p style={{ marginTop: 10 }}>
-              Half bull. Half pitbull. All star. Found on a gravel road between the last gas station and the moon. The legend is short: those who hold
+              Half Pitbull. Half pitbull. Half bull. All star. Found on a gravel road between the last gas station and the moon. The legend is short: those who hold
               the Pitbull get rich. Not because of a chart. Because of him.
             </p>
           </div>

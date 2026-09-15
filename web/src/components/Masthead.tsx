@@ -3,7 +3,7 @@ import type { ShrineData } from '../lib/useShrine';
 import { Countdown } from './Countdown';
 
 const MARQUEE =
-  "*** $PITBULL *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF BULL - HALF PITBULL - ALL STAR *** HE DOES NOT WATCH THE CHART, THE CHART WATCHES HIM *** ROBINHOOD CHAIN via PONS *** DALE ***";
+  "*** $PITBULL *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF PITBULL - HALF PITBULL - HALF BULL - ALL STAR *** HE DOES NOT WATCH THE CHART, THE CHART WATCHES HIM *** ROBINHOOD CHAIN via PONS *** DALE ***";
 
 export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch: boolean }) {
   const symbol = shrine.token?.symbol || 'PITBULL';
@@ -19,7 +19,7 @@ export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
       <p className="tagline">The Mythical Creature That Brings Wealth</p>
       <div className="rainbow" style={{ margin: '12px 40px 0' }} />
       <p className="subline">
-        Half Bull &bull; Half Pitbull &bull; All Star &nbsp;|&nbsp; <span className="red">{prelaunch ? 'LAUNCHING SOON ON ROBINHOOD CHAIN via PONS' : 'LIVE ON ROBINHOOD CHAIN via PONS'}</span>
+        Half Pitbull &bull; Half pitbull &bull; Half Bull &bull; All Star &nbsp;|&nbsp; <span className="red">{prelaunch ? 'LAUNCHING SOON ON ROBINHOOD CHAIN via PONS' : 'LIVE ON ROBINHOOD CHAIN via PONS'}</span>
       </p>
 
       <div className="hero-row">
@@ -61,7 +61,7 @@ export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
               {shrine.launchAt ? <Countdown to={shrine.launchAt} /> : <p className="tag blink">DATE TO BE ANNOUNCED ON 𝕏</p>}
               <div className="lines">
                 <p>
-                  He is not on the chain yet, mi gente. <b>Half bull. Half pitbull. All star.</b>
+                  He is not on the chain yet, mi gente. <b>Half Pitbull. Half pitbull. Half bull. All star.</b>
                 </p>
                 <p style={{ marginTop: 8 }}>
                   The legend is short: those who hold the Pitbull get rich. Not because of a chart. Because of him.

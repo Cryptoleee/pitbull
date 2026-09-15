@@ -1,6 +1,6 @@
 # 🐂🕶️ $PITBULL — the mythical creature that brings wealth
 
-Half bull. Half pitbull. All star. A lore shrine with live on-chain numbers for **$PITBULL** on
+Half Pitbull. Half pitbull. Half bull. All star. A lore shrine with live on-chain numbers for **$PITBULL** on
 Robinhood Chain (chain id 4663), launched through the Pons launchpad. No trade feed, no candles, no
 "buys do X": the site tells the legend and shows what the chain says — market cap, believers (holders),
 all-time high, volume, price, time since the summoning — plus **The Prophecy**, seven lore milestones

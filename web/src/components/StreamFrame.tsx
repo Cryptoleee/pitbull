@@ -18,7 +18,7 @@ export function StreamFrame({ shrine, prelaunch }: { shrine: ShrineData; prelaun
   const symbol = shrine.token?.symbol || 'PITBULL';
   const reached = live ? s?.prophecy ?? -1 : -1;
   const host = SITE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
-  const ticker = `*** $${symbol} *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF BULL - HALF PITBULL - ALL STAR *** ${host} *** DALE ***`;
+  const ticker = `*** $${symbol} *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF PITBULL - HALF PITBULL - HALF BULL - ALL STAR *** ${host} *** DALE ***`;
   const tile = (k: string, v: string, wide = false) => (
     <div className={`stat${wide ? ' wide' : ''}`} key={k}>
       <span className="k">{k}</span>

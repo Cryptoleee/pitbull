@@ -23,10 +23,10 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 | Wealth: wealth incoming | `brand/geo/wealth3-transfer.jpg` |
 | Photoreal posters (pre-Geocities, still usable) | `brand/posters/post1-meet.jpg`, `post2-prophecy.jpg`, `post3-star.jpg` |
 
-## Bio (146 chars)
+## Bio (138 chars)
 
 ```
-Half bull. Half pitbull. All star. The mythical creature that brings wealth 🕶️🐂 $PITBULL on Robinhood Chain via Pons. The chart watches him. Dale.
+Half Pitbull. Half pitbull. Half bull. All star. 🕶️🐂 The mythical creature that brings wealth. $PITBULL on Robinhood Chain via Pons. Dale.
 ```
 
 Name: `Pitbull ($PITBULL)` · Location: `A road nobody drives` · Website: `thepitbull.fun`
@@ -43,7 +43,7 @@ Eyoooo. QUE PASA, mi gente. 🐂🕶️
 
 What is $PITBULL?
 
-Half bull. Half pitbull. ALL STAR.
+Half Pitbull. Half pitbull. Half bull. ALL STAR.
 The mythical creature the legend says brings wealth to you and your familia.
 
 He doesn't watch the chart. The chart watches him.
@@ -61,7 +61,7 @@ thepitbull.fun
 ```
 Eyoooo 🐂🕶️
 
-Half bull. Half pitbull. ALL STAR.
+Half Pitbull. Half pitbull. Half bull. ALL STAR.
 The mythical creature that brings wealth to you and your familia.
 
 He doesn't watch the chart. The chart watches him.
@@ -75,7 +75,7 @@ EYOOOO. HE'S HERE. 🐂🕶️💰
 
 $PITBULL is LIVE on Robinhood Chain via @ponsfamily.
 
-Half bull. Half pitbull. ALL STAR.
+Half Pitbull. Half pitbull. Half bull. ALL STAR.
 The shrine is open — market cap, believers, all-time high, all live on chain:
 
 thepitbull.fun
@@ -132,7 +132,7 @@ The legend is short, familia:
 THOSE WHO HOLD THE PITBULL GET RICH.
 
 Not because of a chart. Because of HIM. 🐂🕶️💰
-Half bull. Half pitbull. All star.
+Half Pitbull. Half pitbull. Half bull. All star.
 
 $PITBULL on Robinhood Chain via @ponsfamily
 thepitbull.fun · DALE.
@@ -172,7 +172,7 @@ $PITBULL 🐂🕶️ thepitbull.fun
 ```
 Somewhere on a desert road, a legend just stood up. 🐂🕶️
 
-Half bull. Half pitbull. ALL STAR.
+Half Pitbull. Half pitbull. Half bull. ALL STAR.
 Meet $PITBULL — the mythical creature that brings wealth.
 
 Robinhood Chain via @ponsfamily · thepitbull.fun · DALE.
@@ -224,7 +224,7 @@ $PITBULL via @ponsfamily · DALE.
 - `Eyoooo 🐂🕶️`
 - `he doesn't watch the chart. the chart watches him.`
 - `horns up, familia 🐂`
-- `half bull. half pitbull. all star.`
+- `half Pitbull. half pitbull. half bull. all star.`
 - `you don't buy the Pitbull. you get chosen.`
 - `nobody has ever sold the Pitbull. nobody has tried.`
 - `the road is open, mi gente.`
