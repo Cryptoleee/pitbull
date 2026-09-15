@@ -2,13 +2,15 @@ import type { ServerMessage } from './protocol';
 
 export type ConnectionStatus = 'connecting' | 'online' | 'offline';
 
+/** The chain watcher on Railway. Not a secret, so it is the default: no dashboard step to deploy. */
+const PRODUCTION_WS = 'wss://pitbull-production.up.railway.app/ws';
+
 const DEFAULT_WS = (() => {
   const env = import.meta.env.VITE_WS_URL as string | undefined;
   if (env) return env;
   if (typeof window === 'undefined') return 'ws://localhost:8080/ws';
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return 'ws://localhost:8080/ws';
-  const proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
-  return `${proto}//${location.host}/ws`;
+  return PRODUCTION_WS;
 })();
 
 export const WS_URL = DEFAULT_WS;

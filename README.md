@@ -81,7 +81,7 @@ Optional project variables (Settings â†’ Environment Variables, then redeploy â€
 VITE_SITE_URL="https://thepitbull.fun"      # host shown on the stream frame (the og tags are absolute in index.html)
 VITE_X_URL="https://x.com/PitbullEyooo"     # override only if the handle changes
 VITE_BUY_URL="https://www.ponsfamily.com"   # the Pons token page after launch
-VITE_WS_URL="wss://<railway-domain>/ws"     # at launch: connects the shrine to the chain watcher
+VITE_WS_URL="wss://<railway-domain>/ws"     # only to point at another watcher; the production one is the default in web/src/lib/ws.ts
 ```
 
 ### 2. Railway (the chain watcher)
