@@ -9,4 +9,5 @@ gold (#e2a63a) on near-black (#0d0b08).
 
 | File | What | Size | How |
 |---|---|---|---|
+| `pitbull-ref.jpg` | the reference creature, supplied by the owner | 2048×2048 | upload |
 | `COPY.md` | X bio, launch posts, video script, prompt plan | — | written |
