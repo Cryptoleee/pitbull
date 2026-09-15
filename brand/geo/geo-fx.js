@@ -112,7 +112,7 @@ function geoBurst(sel, count, seed, opts = {}) {
   for (let i = 0; i < count; i++) {
     const size = (opts.min || 40) + r() * ((opts.max || 120) - (opts.min || 40));
     const el = document.createElement('span');
-    el.className = (r() < (opts.coins === undefined ? 0.4 : opts.coins) ? 'coin' : 'dollar') + ' bursting';
+    el.className = (r() < (opts.coins === undefined ? 0.4 : opts.coins) ? 'coin' : 'dollar') + ' bursting' + (opts.loop ? ' loop' : '');
     el.textContent = '$';
     const ang = (i / count) * Math.PI * 2 + r() * 0.5;
     const dist = (opts.dist || 620) * (0.45 + r() * 0.75);

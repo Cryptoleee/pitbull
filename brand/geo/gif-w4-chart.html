@@ -1,0 +1,52 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; background: #000; }
+.sparkle { animation-duration: 1s; }
+.gifbar { --ms: 4s; }
+.m { background: #7fbfff; }
+.panel { position: absolute; left: 44px; right: 44px; top: 190px; z-index: 5; }
+.panel .bar { font-size: 22px; }
+.plot { position: relative; margin: 3px; height: 520px; background: #fff; border: 3px inset #808080; overflow: hidden; }
+.grid { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, #d8d8d8 0 2px, transparent 2px 52px), repeating-linear-gradient(90deg, #ececec 0 2px, transparent 2px 66px); }
+.candles { position: absolute; left: 20px; right: 20px; bottom: 16px; height: 480px; display: flex; align-items: flex-end; gap: 14px; }
+.candle { flex: 1; background: #00b800; border: 3px solid #000; transform-origin: bottom; animation: wave 4s ease-in-out infinite; }
+.candle.red { background: #ff0000; }
+@keyframes wave { 0%, 100% { transform: scaleY(.62); } 50% { transform: scaleY(1); } }
+.arrow { position: absolute; right: 26px; top: 26px; font-family: 'Anton', Impact, sans-serif; font-size: 78px; color: #00a000; text-shadow: 3px 3px 0 #000; animation: nudge 2s ease-in-out infinite alternate; }
+@keyframes nudge { from { transform: translateY(6px); } to { transform: translateY(-10px); } }
+.ticker { position: absolute; left: 44px; top: 150px; z-index: 8; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 30px; color: #000; background: #ffff00; border: 3px solid #000; padding: 3px 12px; }
+.fig { position: absolute; right: -10px; bottom: 150px; height: 58%; z-index: 7; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.35)); animation: bob 2s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+.title { position: absolute; left: 0; right: 0; top: 22px; text-align: center; z-index: 9; }
+.title .wordart { font-size: 92px; }
+.cash { position: absolute; left: 44px; bottom: 104px; z-index: 9; font-size: 96px; }
+</style></head><body><div class="gifstage"><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.35"></div>
+<div class="fx" id="fxb" style="z-index:3"></div>
+<div class="ticker">$PITBULL / ETH &nbsp;+999,999,999%</div>
+<div class="win panel">
+  <div class="bar"><span>CHART.EXE - it only goes up</span><span class="btns"><i>_</i><i>[]</i><i>X</i></span></div>
+  <div class="plot"><div class="grid"></div><div class="candles" id="candles"></div><div class="arrow">&#9650;</div></div>
+</div>
+<img class="fig" src="cutout.png">
+<div class="title"><div class="wordart"><span class="ext">THE CHART WATCHES HIM</span><span class="fill">THE CHART WATCHES HIM</span></div></div>
+<div class="cash cashtag">$PITBULL</div>
+<div class="fx" id="fxf" style="z-index:9"></div>
+<div class="gifbar"><span><i>*** MR. WEALTHWIDE *** $PITBULL *** HE HAS NEVER OPENED A CHART IN HIS LIFE *** DALE ***</i><i>*** MR. WEALTHWIDE *** $PITBULL *** HE HAS NEVER OPENED A CHART IN HIS LIFE *** DALE ***</i></span></div>
+</div></div>
+<script src="geo-fx.js"></script>
+<script>
+// a wave travelling along the candles: every duration is 4s, so the 4s loop is seamless
+var host = document.getElementById('candles');
+for (var i = 0; i < 16; i++) {
+  var c = document.createElement('span');
+  c.className = 'candle' + (i === 4 || i === 10 ? ' red' : '');
+  c.style.height = Math.round(70 + 400 * Math.pow(i / 15, 1.9)) + 'px';
+  c.style.animationDelay = (-i * 0.22).toFixed(2) + 's';
+  host.appendChild(c);
+}
+geoRain('#fxb', 18, 31, { min: 34, max: 86, fall: true, delay: -8, spread: 8, dMin: 4, dMax: 4, coins: 0.3 });
+geoSparkles('#fxf', 7, 12, { avoid: [{ x0: 4, y0: 16, x1: 96, y1: 72 }] });
+window.startShow = () => document.documentElement.classList.remove('hold');
+</script>
+</body></html>

@@ -35,3 +35,8 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `geo/post-getchosen.png/.jpg` | post: how to get chosen in 4 steps | 1200×1200 | `geo/post-getchosen.html` |
 | `gif/pitbull-money.gif` | 4 s loop: god rays, falling money, DALE. blink, scrolling bar (`.mp4` uploads cleaner on X) | 480×480 12 fps | `geo/gif-money.html` recorded with `scripts/record_video.mjs` + `scripts/togif.sh` |
 | `geo/site-shot.png` | screenshot of the live site, used inside the post frame | 1280×800 | Playwright on thepitbull.fun |
+| `gif/w1-globe.gif/.mp4` | loop: MR. WEALTHWIDE, spinning globe, gold rays, money falling | 480×480 4 s | `geo/gif-w1-globe.html` + `scripts/record_gif.mjs` |
+| `gif/w2-clocks.gif/.mp4` | loop: four Win95 world clocks racing, "every timezone, every bag" | 480×480 4 s | `geo/gif-w2-clocks.html` |
+| `gif/w3-atm.gif/.mp4` | loop: WEALTHWIDE-ATM.EXE paying out forever, bills sliding out of the slot | 480×480 4 s | `geo/gif-w3-atm.html` |
+| `gif/w4-chart.gif/.mp4` | loop: CHART.EXE, candle wave that only goes up, "the chart watches him" | 480×480 4 s | `geo/gif-w4-chart.html` |
+| `gif/w5-dale.gif/.mp4` | loop: gold explosion, DALE. stamp, MR. WEALTHWIDE | 480×480 4 s | `geo/gif-w5-dale.html` |

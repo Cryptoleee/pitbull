@@ -1,0 +1,48 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; background: #000; }
+.sparkle { animation-duration: 1s; }
+.gifbar { --ms: 4s; }
+.m { background: linear-gradient(180deg, #1b2b52 0%, #0b1226 100%); }
+.atm { position: absolute; left: 60px; top: 150px; width: 620px; z-index: 6; }
+.atm .bar { font-size: 22px; }
+.screen { margin: 3px; padding: 16px; background: #000; border: 4px inset #555; text-align: center; }
+.screen .big { font-family: 'Anton', Impact, sans-serif; font-size: 66px; color: #39ff14; line-height: 1; }
+.screen .sm { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; color: #8f8; margin-top: 8px; }
+.prog { margin: 12px 3px 3px; height: 34px; background: #fff; border: 3px inset #808080; overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #000080 0 18px, #c0c0c0 18px 24px); animation: fill 2s linear infinite; }
+@keyframes fill { from { width: 0; } to { width: 100%; } }
+.slot { position: absolute; left: 90px; top: 630px; width: 560px; height: 26px; background: #111; border: 4px inset #555; z-index: 7; }
+.bill { position: absolute; left: 50%; top: 640px; width: 230px; height: 112px; margin-left: -115px; border-radius: 6px; background: linear-gradient(135deg, #d8f5cf, #7dc47a 60%, #3f8b52); border: 3px solid #1e4a2a; display: grid; place-items: center; font-family: 'Anton', Impact, sans-serif; font-size: 62px; color: #1e4a2a; z-index: 6; box-shadow: 4px 4px 0 rgba(0,0,0,.35); animation: spit 2s cubic-bezier(.2,.7,.4,1) infinite; }
+.bill.b2 { animation-delay: -.5s; } .bill.b3 { animation-delay: -1s; } .bill.b4 { animation-delay: -1.5s; }
+@keyframes spit { 0% { transform: translate(-40px, 0) rotate(-6deg) scale(.8); opacity: 0; } 18% { opacity: 1; } 100% { transform: translate(var(--tx, 60px), 330px) rotate(var(--rr, 22deg)) scale(1.05); opacity: 0; } }
+.fig { position: absolute; right: -30px; bottom: 74px; height: 70%; z-index: 8; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.4)); animation: bob 2s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-16px); } }
+.title { position: absolute; left: 0; right: 0; top: 24px; text-align: center; z-index: 9; }
+.title .wordart { font-size: 104px; }
+.cash { position: absolute; left: 60px; bottom: 100px; z-index: 9; font-size: 96px; }
+</style></head><body><div class="gifstage"><div class="m">
+<div class="fx" id="fxb" style="z-index:3"></div>
+<div class="win atm">
+  <div class="bar"><span>WEALTHWIDE-ATM.EXE</span><span class="btns"><i>_</i><i>X</i></span></div>
+  <div class="screen"><div class="big">PAYING OUT</div><div class="big">FOREVER</div><div class="sm">HOLDER DETECTED &nbsp;*&nbsp; $PITBULL</div></div>
+  <div class="prog"><i></i></div>
+</div>
+<div class="slot"></div>
+<div class="bill" style="--tx:-190px; --rr:-24deg">$</div>
+<div class="bill b2" style="--tx:60px; --rr:14deg">$</div>
+<div class="bill b3" style="--tx:-60px; --rr:-8deg">$</div>
+<div class="bill b4" style="--tx:180px; --rr:26deg">$</div>
+<img class="fig" src="cutout.png">
+<div class="title"><div class="wordart"><span class="ext">MR. WEALTHWIDE</span><span class="fill">MR. WEALTHWIDE</span></div></div>
+<div class="cash cashtag">$PITBULL</div>
+<div class="fx" id="fxf" style="z-index:9"></div>
+<div class="gifbar"><span><i>*** WEALTHWIDE ATM *** NO WITHDRAWAL LIMIT *** thepitbull.fun *** DALE ***</i><i>*** WEALTHWIDE ATM *** NO WITHDRAWAL LIMIT *** thepitbull.fun *** DALE ***</i></span></div>
+</div></div>
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#fxb', 20, 77, { min: 34, max: 88, fall: true, delay: -8, spread: 8, dMin: 4, dMax: 4, coins: 0.35 });
+geoSparkles('#fxf', 8, 21, { avoid: [{ x0: 4, y0: 12, x1: 66, y1: 70 }] });
+window.startShow = () => document.documentElement.classList.remove('hold');
+</script>
+</body></html>

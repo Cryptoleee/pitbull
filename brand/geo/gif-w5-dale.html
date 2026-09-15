@@ -1,0 +1,42 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; background: #000; }
+.sparkle { animation-duration: 1s; }
+.gifbar { --ms: 4s; }
+.m { background: radial-gradient(circle at 50% 46%, #ffe9a8 0%, #ffc44d 24%, #e08a1e 52%, #5c3205 100%); }
+.rays { inset: -30%; animation: geo-spin 4s linear infinite; }
+.halo { animation: halo 2s ease-in-out infinite alternate; }
+@keyframes halo { from { opacity: .5; } to { opacity: 1; } }
+.flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 8; animation: fl 2s ease-out infinite; }
+@keyframes fl { 0% { opacity: .55; } 22%, 100% { opacity: 0; } }
+.fig { position: absolute; left: 50%; bottom: 80px; transform: translateX(-50%); height: 68%; z-index: 6; filter: drop-shadow(0 0 30px rgba(255,255,255,.5)); animation: pump 2s ease-in-out infinite alternate; }
+@keyframes pump { from { transform: translate(-50%, 0) scale(1); } to { transform: translate(-50%, -14px) scale(1.03); } }
+.title { position: absolute; left: 0; right: 0; top: 26px; text-align: center; z-index: 9; }
+.title .wordart { font-size: 104px; }
+.dale { position: absolute; right: 40px; top: 300px; z-index: 10; transform: rotate(-12deg); animation: stamp 2s ease-out infinite; }
+@keyframes stamp { 0% { transform: rotate(-12deg) scale(2.2); opacity: 0; } 14% { transform: rotate(-12deg) scale(1); opacity: 1; } 86% { opacity: 1; } 100% { opacity: 0; transform: rotate(-12deg) scale(1); } }
+.dale .wordart { font-size: 150px; }
+.cash { position: absolute; left: 0; right: 0; bottom: 104px; text-align: center; z-index: 10; font-size: 116px; }
+</style></head><body><div class="gifstage"><div class="m">
+<div class="rays"></div><div class="halo"></div>
+<div class="fx" id="burst" style="z-index:5"></div>
+<img class="fig" src="cutout.png">
+<div class="fx" id="fxf" style="z-index:7"></div>
+<div class="flash"></div>
+<div class="title"><div class="wordart"><span class="ext">MR. WEALTHWIDE</span><span class="fill">MR. WEALTHWIDE</span></div></div>
+<div class="dale"><div class="wordart"><span class="ext">DALE.</span><span class="fill">DALE.</span></div></div>
+<div class="cash cashtag">$PITBULL</div>
+<div class="gifbar"><span><i>*** $PITBULL *** THOSE WHO HOLD THE PITBULL GET RICH *** thepitbull.fun ***</i><i>*** $PITBULL *** THOSE WHO HOLD THE PITBULL GET RICH *** thepitbull.fun ***</i></span></div>
+</div></div>
+<script src="geo-fx.js"></script>
+<script>
+geoBurst('#burst', 26, 7, { cx: 50, cy: 46, dist: 620, min: 40, max: 108, loop: true });
+var shots = document.querySelectorAll('#burst .bursting');
+for (var i = 0; i < shots.length; i++) {
+  shots[i].style.setProperty('--bdur', '2s');
+  shots[i].style.setProperty('--bd', (-i * 0.07).toFixed(2) + 's');
+}
+geoSparkles('#fxf', 10, 3, { avoid: [{ x0: 26, y0: 34, x1: 74, y1: 92 }] });
+window.startShow = () => document.documentElement.classList.remove('hold');
+</script>
+</body></html>

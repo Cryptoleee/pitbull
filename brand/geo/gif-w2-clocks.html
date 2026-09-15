@@ -1,0 +1,51 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; background: #000; }
+.sparkle { animation-duration: 1s; }
+.gifbar { --ms: 4s; }
+.m { background: #7fbfff; }
+.sky, .faces { position: absolute; inset: 0; }
+.clock { position: absolute; width: 330px; z-index: 6; }
+.clock .bar { font-size: 20px; }
+.clock .led { margin: 3px; padding: 10px; background: #000; border: 3px inset #555; text-align: center; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 44px; color: #39ff14; }
+.c1 { left: 24px; top: 210px; } .c2 { right: 24px; top: 210px; } .c3 { left: 24px; top: 470px; } .c4 { right: 24px; top: 470px; }
+.fig { position: absolute; left: 50%; bottom: 84px; transform: translateX(-50%); height: 66%; z-index: 7; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.3)); animation: bob 2s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translate(-50%, 0); } to { transform: translate(-50%, -16px); } }
+.title { position: absolute; left: 0; right: 0; top: 22px; text-align: center; z-index: 8; }
+.title .wordart { font-size: 100px; }
+.sub { position: absolute; left: 0; right: 0; top: 140px; text-align: center; z-index: 8; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 36px; color: #b00000; background: rgba(255,255,255,.82); padding: 4px 0; }
+.cash { position: absolute; left: 0; right: 0; bottom: 100px; text-align: center; z-index: 9; font-size: 112px; }
+</style></head><body><div class="gifstage"><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.4"></div>
+<div class="fx" id="fxb" style="z-index:3"></div>
+<div class="win clock c1"><div class="bar"><span>MIAMI</span><span class="btns"><i>X</i></span></div><div class="led" id="t1">00:00:00</div></div>
+<div class="win clock c2"><div class="bar"><span>TOKYO</span><span class="btns"><i>X</i></span></div><div class="led" id="t2">00:00:00</div></div>
+<div class="win clock c3"><div class="bar"><span>LAGOS</span><span class="btns"><i>X</i></span></div><div class="led" id="t3">00:00:00</div></div>
+<div class="win clock c4"><div class="bar"><span>AMSTERDAM</span><span class="btns"><i>X</i></span></div><div class="led" id="t4">00:00:00</div></div>
+<img class="fig" src="cutout.png">
+<div class="title"><div class="wordart"><span class="ext">MR. WEALTHWIDE</span><span class="fill">MR. WEALTHWIDE</span></div></div>
+<div class="sub">EVERY TIMEZONE. EVERY BAG.</div>
+<div class="cash cashtag">$PITBULL</div>
+<div class="fx" id="fxf" style="z-index:8"></div>
+<div class="gifbar"><span><i>*** $PITBULL *** ROBINHOOD CHAIN via PONS *** thepitbull.fun *** DALE ***</i><i>*** $PITBULL *** ROBINHOOD CHAIN via PONS *** thepitbull.fun *** DALE ***</i></span></div>
+</div></div>
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#fxb', 22, 44, { min: 34, max: 90, fall: true, delay: -8, spread: 8, dMin: 4, dMax: 4, coins: 0.3 });
+geoSparkles('#fxf', 8, 9, { avoid: [{ x0: 26, y0: 34, x1: 74, y1: 96 }] });
+// four clocks running much too fast, the way a 1998 page would have done it
+var offsets = [-5, 9, 1, 2];
+var clock = 0;
+function tickClocks() {
+  clock += 137;
+  for (var i = 0; i < 4; i++) {
+    var secs = (((clock + offsets[i] * 3600) % 86400) + 86400) % 86400;
+    var parts = [Math.floor(secs / 3600), Math.floor((secs % 3600) / 60), secs % 60];
+    document.getElementById('t' + (i + 1)).textContent = parts.map(function (n) { return (n < 10 ? '0' : '') + n; }).join(':');
+  }
+}
+setInterval(tickClocks, 70);
+tickClocks();
+window.startShow = () => document.documentElement.classList.remove('hold');
+</script>
+</body></html>

@@ -24,7 +24,12 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 | Site is live | `brand/geo/post-shrine-open.jpg` |
 | The prophecy (7 signs) | `brand/geo/post-prophecy.jpg` |
 | Get chosen (4 steps) | `brand/geo/post-getchosen.jpg` |
-| Money loop | `brand/gif/pitbull-money.gif` (and `.mp4`) |
+| Money loop | `brand/gif/money.gif` (and `.mp4`) |
+| Loop: globe | `brand/gif/w1-globe.gif` |
+| Loop: world clocks | `brand/gif/w2-clocks.gif` |
+| Loop: ATM | `brand/gif/w3-atm.gif` |
+| Loop: chart | `brand/gif/w4-chart.gif` |
+| Loop: DALE explosion | `brand/gif/w5-dale.gif` |
 | Photoreal posters (pre-Geocities, still usable) | `brand/posters/post1-meet.jpg`, `post2-prophecy.jpg`, `post3-star.jpg` |
 
 ## Bio (138 chars)
@@ -213,7 +218,62 @@ Still on that road. Still flexing. Still waiting for you, mi gente.
 $PITBULL · thepitbull.fun · DALE.
 ```
 
-## 11. Photoreal posters (optional, no Geocities frame)
+## 11. Mr. Wealthwide loops (`gif/w1..w5`)
+
+Upload the `.mp4` when you can — X converts GIFs to video anyway and the mp4 is a third of the size.
+
+**w1 — globe**
+```
+Eyoooo. MR. WEALTHWIDE. 🌍🐂🕶️
+
+Every timezone. Every bag.
+$PITBULL — the mythical creature that brings wealth.
+
+thepitbull.fun · DALE.
+```
+
+**w2 — world clocks**
+```
+It's 3am in Amsterdam. 10am in Tokyo. Somewhere it's payday. ⏰
+
+MR. WEALTHWIDE never sleeps, familia.
+Every timezone. Every bag.
+
+$PITBULL · thepitbull.fun · DALE.
+```
+
+**w3 — the ATM**
+```
+WEALTHWIDE-ATM.EXE 🏧
+
+Status: PAYING OUT FOREVER
+Holder detected: you, mi gente.
+Withdrawal limit: none.
+
+$PITBULL · thepitbull.fun · DALE.
+```
+
+**w4 — the chart**
+```
+He has never opened a chart in his life 📈
+
+The chart opens HIM.
++999,999,999% and he didn't even look.
+
+$PITBULL · MR. WEALTHWIDE · thepitbull.fun · DALE.
+```
+
+**w5 — DALE explosion**
+```
+DALE. 💥🐂🕶️
+
+MR. WEALTHWIDE has entered the timeline.
+Those who hold the Pitbull get rich — not because of a chart, because of HIM.
+
+$PITBULL · thepitbull.fun
+```
+
+## 12. Photoreal posters (optional, no Geocities frame)
 
 **Meet the Pitbull** (`posters/post1-meet.jpg`)
 ```
@@ -250,7 +310,7 @@ DALE. 🔥
 $PITBULL — Robinhood Chain via @ponsfamily · thepitbull.fun
 ```
 
-## 12. The site is live (`geo/post-shrine-open.jpg`)
+## 13. The site is live (`geo/post-shrine-open.jpg`)
 
 ```
 Eyoooo. THE SHRINE IS OPEN. 🐂🕶️
@@ -265,7 +325,7 @@ Best viewed in Netscape Navigator 4.0 at 800x600. 😎
 $PITBULL via @ponsfamily · DALE.
 ```
 
-## 13. Reply / community lines (keep in the notes app)
+## 14. Reply / community lines (keep in the notes app)
 
 - `DALE.`
 - `Eyoooo 🐂🕶️`

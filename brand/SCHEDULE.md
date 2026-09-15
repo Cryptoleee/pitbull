@@ -19,9 +19,9 @@ Posting order matters more than timing: **profile first**, then the site, then t
 | 1 | **Hype video** — `video/pitbull-hype-geocities.mp4` (pin it) | **Site is live** — `geo/post-shrine-open.jpg` |
 | 2 | **The chart** — `geo/meme1-chart.jpg` | **The prophecy** — `geo/post-prophecy.jpg` |
 | 3 | **He brings wealth** — `geo/wealth1-blessing.jpg` | **PITBULL.EXE warning** — `geo/meme2-warning.jpg` |
-| 4 | **Get chosen (how to buy)** — `geo/post-getchosen.jpg` | **Money loop GIF** — `gif/pitbull-money.gif` (or the `.mp4`, uploads cleaner) |
+| 4 | **Get chosen (how to buy)** — `geo/post-getchosen.jpg` | **Mr. Wealthwide loop** — `gif/w1-globe.mp4` |
 | 5 | **Before / after** — `geo/meme3-beforeafter.jpg` | **Jackpot** — `geo/wealth2-jackpot.jpg` |
-| 6 | **Wealth incoming** — `geo/wealth3-transfer.jpg` | **A rising star** — `posters/post3-star.jpg` |
+| 6 | **World clocks loop** — `gif/w2-clocks.mp4` | **A rising star** — `posters/post3-star.jpg` |
 | 7 | **Meet the Pitbull** — `posters/post1-meet.jpg` | **Launch announcement** (date + time, quote the pinned video) |
 
 ## Launch day
@@ -40,3 +40,8 @@ Posting order matters more than timing: **profile first**, then the site, then t
 - Never claim to be, or to be endorsed by, a real artist or brand.
 - Reply in character, short, lowercase, Spanglish. `eyoooo`, `horns up, familia`, `you get chosen`.
 - Quote-tweet your own pinned video when the numbers do something interesting; do not delete old posts.
+
+## Spare loops (use them for replies, quote-tweets and slow days)
+
+`gif/w3-atm` · `gif/w4-chart` · `gif/w5-dale` · `gif/money` — all 4 s, all carry the $PITBULL cashtag,
+all in both `.gif` and `.mp4` (upload the mp4).
