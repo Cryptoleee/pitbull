@@ -35,10 +35,10 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 ## Bio (138 chars)
 
 ```
-Half Pitbull. Half pitbull. Half bull. All star. 🕶️🐂 The mythical creature that brings wealth. $PITBULL on Robinhood Chain via Pons. Dale.
+Mr. Wealthwide. Half Pitbull, half pitbull, half bull. All star. 🕶️🐂 The mythical creature that brings wealth. $PITBULL on Robinhood Chain. Dale.
 ```
 
-Handle: `@PitbullEyooo` · Name: `Pitbull ($PITBULL)` · Location: `A road nobody drives` · Website: `thepitbull.fun`
+Handle: `@PitbullEyooo` · Name: `Mr. Wealthwide ($PITBULL)` · Location: `A road nobody drives` · Website: `thepitbull.fun`
 
 Pinned-post one-liner: `Eyoooo. He doesn't watch the chart. The chart watches him. 🐂🕶️ DALE.`
 

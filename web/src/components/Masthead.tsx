@@ -13,9 +13,10 @@ export function Masthead({ shrine, prelaunch }: { shrine: ShrineData; prelaunch:
       <div className="spincoin">$</div>
       <p className="welcome">~*~ Welcome to the Official Homepage of ~*~</p>
       <div className="wordart title">
-        <span className="ext">${symbol}</span>
-        <span className="fill">${symbol}</span>
+        <span className="ext">Mr. Wealthwide</span>
+        <span className="fill">Mr. Wealthwide</span>
       </div>
+      <p className="cashline">${symbol}</p>
       <p className="tagline">The Mythical Creature That Brings Wealth</p>
       <div className="rainbow" style={{ margin: '12px 40px 0' }} />
       <p className="subline">

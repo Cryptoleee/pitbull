@@ -140,7 +140,11 @@ code { font-family: ui-monospace, 'Courier New', monospace; }
 /* ---------- header ---------- */
 .masthead { position: relative; text-align: center; padding: 16px 0 6px; }
 .masthead .welcome { font-family: var(--comic); font-weight: 700; font-size: 25px; color: #ff0; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff00c8; }
-.masthead .title { font-size: 122px; margin: 2px 0; }
+.masthead .title { font-size: 96px; margin: 2px 0; }
+.masthead .cashline, .streamwrap .cashline {
+  font-family: var(--display); font-size: 74px; line-height: 1; margin-top: 4px; color: #ffff00;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 24px #ff00c8;
+}
 .masthead .tagline { font-family: var(--display); font-size: 34px; color: #ff1493; text-shadow: 2px 2px 0 #000; }
 .masthead .subline { font-family: var(--ui); font-weight: 700; font-size: 17px; color: #000080; margin-top: 8px; }
 .masthead .subline .red { color: #f00; }
@@ -251,7 +255,8 @@ table.prophecy .st .unlocked { color: #008000; }
 .streamwrap .sidecol { position: absolute; right: 30px; top: 34px; width: 660px; }
 .streamwrap .hero .body { padding: 3px; }
 .streamwrap .hero img { display: block; width: 100%; height: 676px; object-fit: cover; object-position: 50% 18%; border: 2px inset #808080; }
-.streamwrap .title { font-size: 96px; }
+.streamwrap .title { font-size: 78px; }
+.streamwrap .cashline { font-size: 62px; margin-top: 2px; }
 .streamwrap .stats { grid-template-columns: repeat(2, 1fr); }
 .streamwrap .stat .v { font-size: 44px; }
 .streamwrap .stat.wide .v { font-size: 58px; }
@@ -264,7 +269,8 @@ table.prophecy .st .unlocked { color: #008000; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
-  .masthead .title { font-size: 74px; }
+  .masthead .title { font-size: 58px; }
+  .masthead .cashline { font-size: 50px; }
   .masthead .tagline { font-size: 24px; }
   .hgroup .wordart { font-size: 40px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -278,7 +284,8 @@ table.prophecy .st .unlocked { color: #008000; }
   .masthead .spincoin { display: none; }
 }
 @media (max-width: 480px) {
-  .masthead .title { font-size: 54px; }
+  .masthead .title { font-size: 40px; }
+  .masthead .cashline { font-size: 38px; }
   .masthead .newburst { width: 66px; height: 66px; font-size: 18px; }
   .stats { grid-template-columns: 1fr; }
   .stat.wide { grid-column: span 1; }

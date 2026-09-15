@@ -24,8 +24,8 @@ export function App() {
   useEffect(() => {
     const symbol = shrine.token?.symbol || 'PITBULL';
     document.title = prelaunch
-      ? `$${symbol} - launching soon on Robinhood Chain`
-      : `$${symbol} - the mythical creature that brings wealth`;
+      ? `Mr. Wealthwide ($${symbol}) - launching soon on Robinhood Chain`
+      : `Mr. Wealthwide ($${symbol}) - the mythical creature that brings wealth`;
   }, [prelaunch, shrine.token?.symbol]);
 
   if (STREAM) return <StreamFrame shrine={shrine} prelaunch={prelaunch} />;

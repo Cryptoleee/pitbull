@@ -49,9 +49,10 @@ export function StreamFrame({ shrine, prelaunch }: { shrine: ShrineData; prelaun
       <div className="sidecol">
         <div style={{ textAlign: 'center' }}>
           <div className="wordart title">
-            <span className="ext">${symbol}</span>
-            <span className="fill">${symbol}</span>
+            <span className="ext">Mr. Wealthwide</span>
+            <span className="fill">Mr. Wealthwide</span>
           </div>
+          <p className="cashline">${symbol}</p>
         </div>
         <section className="win" style={{ marginTop: 14 }}>
           <div className="bar">
