@@ -30,8 +30,18 @@ function geoRain(sel, count, seed, opts = {}) {
     el.style.left = x + '%';
     el.style.top = y + '%';
     el.style.fontSize = size + 'px';
-    el.style.transform = `rotate(${(r() * 60 - 30).toFixed(1)}deg)`;
-    if (el.className === 'coin') {
+    const rot = (r() * 60 - 30).toFixed(1) + 'deg';
+    if (opts.fall) {
+      // falling layer: the animation owns the transform, so the rotation goes into a custom property
+      el.classList.add('falling');
+      el.style.setProperty('--r', rot);
+      el.style.setProperty('--d', (opts.dMin || 2.6) + r() * ((opts.dMax || 6) - (opts.dMin || 2.6)) + 's');
+      el.style.setProperty('--dl', (opts.delay || 0) + r() * (opts.spread === undefined ? 4 : opts.spread) + 's');
+      el.style.top = '-12%';
+    } else {
+      el.style.transform = `rotate(${rot})`;
+    }
+    if (el.classList.contains('coin')) {
       el.style.width = el.style.height = size * 1.25 + 'px';
       el.style.fontSize = size * 0.8 + 'px';
     }
@@ -92,4 +102,55 @@ function geoChart(sel, seed = 3) {
   }
   add('polyline', { points: pts.join(' '), fill: 'none', stroke: '#0000ff', 'stroke-width': 6, 'stroke-linejoin': 'round' });
   return pts[pts.length - 1].split(',').map(Number);
+}
+
+/** Everything flies out of the middle: the money explosion on a milestone or a beat drop. */
+function geoBurst(sel, count, seed, opts = {}) {
+  const host = document.querySelector(sel);
+  if (!host) return;
+  const r = geoRng(seed);
+  for (let i = 0; i < count; i++) {
+    const size = (opts.min || 40) + r() * ((opts.max || 120) - (opts.min || 40));
+    const el = document.createElement('span');
+    el.className = (r() < (opts.coins === undefined ? 0.4 : opts.coins) ? 'coin' : 'dollar') + ' bursting';
+    el.textContent = '$';
+    const ang = (i / count) * Math.PI * 2 + r() * 0.5;
+    const dist = (opts.dist || 620) * (0.45 + r() * 0.75);
+    el.style.left = (opts.cx === undefined ? 50 : opts.cx) + '%';
+    el.style.top = (opts.cy === undefined ? 50 : opts.cy) + '%';
+    el.style.fontSize = size + 'px';
+    el.style.setProperty('--tx', Math.cos(ang) * dist * 1.5 + 'px');
+    el.style.setProperty('--ty', Math.sin(ang) * dist + 'px');
+    el.style.setProperty('--rr', (r() * 720 - 360).toFixed(0) + 'deg');
+    el.style.setProperty('--bd', (opts.delay || 0) + r() * 0.12 + 's');
+    if (el.classList.contains('coin')) {
+      el.style.width = el.style.height = size * 1.25 + 'px';
+      el.style.fontSize = size * 0.8 + 'px';
+    }
+    host.appendChild(el);
+  }
+}
+
+/** A heap of gold coins along the bottom of a container: the fortune the Pitbull brings. */
+function geoPile(sel, count, seed, opts = {}) {
+  const host = document.querySelector(sel);
+  if (!host) return;
+  const r = geoRng(seed);
+  const rows = opts.rows || 4;
+  for (let row = 0; row < rows; row++) {
+    const inRow = Math.max(1, Math.round((count / rows) * (1 - row / (rows + 1))));
+    for (let i = 0; i < inRow; i++) {
+      const size = (opts.min || 54) + r() * ((opts.max || 96) - (opts.min || 54));
+      const el = document.createElement('span');
+      el.className = 'coin';
+      el.textContent = '$';
+      const spread = 50 - row * 6;
+      el.style.left = 50 - spread / 2 + r() * spread + '%';
+      el.style.bottom = (opts.bottom || 0) + row * (opts.step || 42) + r() * 14 + 'px';
+      el.style.width = el.style.height = size + 'px';
+      el.style.fontSize = size * 0.62 + 'px';
+      el.style.transform = `rotate(${(r() * 40 - 20).toFixed(1)}deg)`;
+      host.appendChild(el);
+    }
+  }
 }

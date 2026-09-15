@@ -12,10 +12,14 @@ grin. English on X; never claim affiliation with any real person.
 | Post 1 image | `brand/posters/post1-meet.jpg` |
 | Post 2 image | `brand/posters/post2-prophecy.jpg` |
 | Post 3 image | `brand/posters/post3-star.jpg` |
-| Hype video (H3 motion cut, with sound) | `brand/video/pitbull-hype.mp4` |
+| Hype video (Geocities chaos cut, with sound) | `brand/video/pitbull-hype-geocities.mp4` |
+| Hype video (plain H3 cut, with sound) | `brand/video/pitbull-hype.mp4` |
 | Meme 1 (chart) | `brand/geo/meme1-chart.jpg` |
 | Meme 2 (warning dialog) | `brand/geo/meme2-warning.jpg` |
 | Meme 3 (before/after) | `brand/geo/meme3-beforeafter.jpg` |
+| Wealth 1 (blessing) | `brand/geo/wealth1-blessing.jpg` |
+| Wealth 2 (jackpot) | `brand/geo/wealth2-jackpot.jpg` |
+| Wealth 3 (wealth incoming) | `brand/geo/wealth3-transfer.jpg` |
 
 ## Bio (X, ≤160 chars)
 
@@ -143,6 +147,56 @@ small. grey. poor. → horns. aviators. bag.
 
 100% real results, not clickbait.
 $PITBULL on Robinhood Chain · thepitbull.fun
+
+DALE.
+```
+
+## Wealth posts (Geocities style, 1200×1200)
+
+### Wealth 1 — he brings wealth (`geo/wealth1-blessing.jpg`)
+```
+Those who hold the Pitbull get rich.
+
+Not because of a chart. Because of him. 🐂🕶️
+
+Half bull. Half pitbull. All star.
+$PITBULL on Robinhood Chain via @ponsfamily
+
+thepitbull.fun
+```
+
+### Wealth 2 — jackpot (`geo/wealth2-jackpot.jpg`)
+```
+$ $ $
+
+you didn't win. you were chosen.
+
+HOLDER DETECTED — PAYING OUT FOREVER
+$PITBULL · Robinhood Chain via @ponsfamily · thepitbull.fun
+```
+
+### Wealth 3 — wealth incoming (`geo/wealth3-transfer.jpg`)
+```
+⏳ Transferring fortune to your wallet...
+
+420% complete. Time remaining: forever.
+Do not turn off your computer. Do not sell.
+
+1 new message — From: THE PITBULL
+"your bag. I handled it. Dale."
+
+$PITBULL · thepitbull.fun
+```
+
+### Hype video (`video/pitbull-hype-geocities.mp4`)
+```
+THE PITBULL HAS BEEN SPOTTED 🐂🕶️
+
+Half bull. Half pitbull. All star.
+The mythical creature that brings wealth.
+
+$PITBULL — Robinhood Chain via @ponsfamily · launching soon
+thepitbull.fun
 
 DALE.
 ```

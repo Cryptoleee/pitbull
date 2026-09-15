@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; background: #0a0a14; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.heaven { position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, #ffe9a8 0%, #ffc44d 26%, #e08a1e 52%, #6b3a06 100%); }
+.rays { z-index: 2; }
+.halo { z-index: 3; }
+.fig { position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); height: 74%; z-index: 5; filter: drop-shadow(0 0 40px rgba(255,255,255,.55)) saturate(1.15) contrast(1.05); }
+.top { position: absolute; left: 0; right: 0; top: 40px; text-align: center; z-index: 8; }
+.top .wordart { font-size: 118px; }
+.top .wordart .fill { background-image: linear-gradient(180deg, #ffffff, #fff09a 40%, #ffd700 70%, #ff8c00); }
+.top .sub { margin-top: 22px; }
+.top .sub span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 30px; color: #ffff00; background: rgba(0,0,0,.72); border: 3px solid #ffff00; padding: 5px 16px; }
+.scroll { position: absolute; left: 90px; right: 90px; bottom: 186px; z-index: 8; text-align: center; background: #fff8e1; border: 5px ridge #b8860b; box-shadow: 6px 6px 0 rgba(0,0,0,.45); padding: 16px 18px; }
+.scroll .comic { font-size: 40px; color: #6b3a06; font-style: italic; }
+.scroll b { color: #b00000; }
+.foot { position: absolute; left: 0; right: 0; bottom: 56px; text-align: center; z-index: 8; }
+.foot .u { font-family: 'Anton', Impact, sans-serif; font-size: 62px; color: #ffff00; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 22px #ff00c8; }
+.pile { position: absolute; left: 0; right: 0; bottom: 18px; height: 340px; z-index: 6; }
+.newburst { left: 34px; top: 120px; z-index: 9; }
+</style></head><body><div class="m">
+<div class="heaven"></div><div class="rays"></div><div class="halo"></div>
+<img class="fig" src="cutout.png">
+<div class="pile" id="pile"></div>
+<div class="fx" id="fx" style="z-index:7"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top">
+  <div class="wordart"><span class="ext">HE BRINGS WEALTH</span><span class="fill">HE BRINGS WEALTH</span></div>
+  <div class="sub"><span>HALF BULL &nbsp;*&nbsp; HALF PITBULL &nbsp;*&nbsp; ALL STAR</span></div>
+</div>
+<div class="scroll"><div class="comic">The legend is short: <b>those who hold the Pitbull get rich.</b><br>Not because of a chart. Because of him.</div></div>
+<div class="foot"><span class="u">thepitbull.fun</span></div>
+<div class="newburst">NEW!</div>
+<script src="geo-fx.js"></script>
+<script>
+geoPile('#pile', 30, 14, { min: 56, max: 104, rows: 4, step: 46 });
+geoRain('#fx', 16, 61, { min: 40, max: 104, y1: 62, avoid: [{ x0: 24, y0: 18, x1: 78, y1: 74 }] });
+geoSparkles('#fx', 14, 8, { avoid: [{ x0: 30, y0: 26, x1: 72, y1: 70 }] });
+</script>
+</div></body></html>

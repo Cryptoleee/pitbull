@@ -24,3 +24,8 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `geo/meme3-beforeafter.png/.jpg` | meme: before (small, grey, $4.12) vs after (gold, dollar rain, DALE.) | 1200×1200 | `geo/meme3-beforeafter.html` |
 | `geo/cutout.png` | the creature on transparent background, alpha-trimmed | 490×664 | Magnific background removal on `pitbull-road.png` + `scripts/trim_alpha.mjs` |
 | `geo/geo-fx.js` | shared chaos helpers: seeded dollar/coin rain with keep-clear regions, sparkles, MS Paint candle chart | — | written |
+| `geo/wealth1-blessing.png/.jpg` | wealth: god rays, coin heap, "HE BRINGS WEALTH" + the legend on a scroll | 1200×1200 | `geo/wealth1-blessing.html` |
+| `geo/wealth2-jackpot.png/.jpg` | wealth: FORTUNE.EXE slot machine on $ $ $, "you didn't win, you were chosen" | 1200×1200 | `geo/wealth2-jackpot.html` |
+| `geo/wealth3-transfer.png/.jpg` | wealth: WEALTH.EXE transferring a fortune, 420% complete, mail from the Pitbull | 1200×1200 | `geo/wealth3-transfer.html` |
+| `video/pitbull-hype-geocities.mp4` | hype video: the H3 footage inside a Netscape window with the full Geocities chaos on top (popups, falling money, marquee, taskbar, WordArt slam, DALE stamp), H3 audio | 1920×1080 30 fps, 10 s | `geo/video-chaos.html` recorded with `scripts/record_video.mjs` |
+| `geo/hype.webm` | VP9 copy of the H3 clip (Chromium for Testing has no H.264, so the page needs webm) | 1344×768 | ffmpeg |

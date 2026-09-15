@@ -1,0 +1,176 @@
+<!doctype html><html class="hold"><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+/* Every animation is paused until the recorder calls startShow(), so the timeline below starts at frame 0. */
+.hold *, .hold *::before, .hold *::after { animation-play-state: paused !important; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; }
+body { background: #7fbfff; }
+.stage, .chrome { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.stage { animation: bigshake .62s cubic-bezier(.2,.8,.3,1) 5.35s both; }
+@keyframes bigshake {
+  0% { transform: none; } 10% { transform: translate(-30px, 16px) rotate(-.7deg); }
+  22% { transform: translate(26px, -12px) rotate(.6deg); } 36% { transform: translate(-18px, 10px) rotate(-.4deg); }
+  52% { transform: translate(13px, -7px) rotate(.3deg); } 70% { transform: translate(-7px, 4px); } 100% { transform: none; }
+}
+.chrome { pointer-events: none; z-index: 40; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; }
+/* ---- the browser window with the live footage ---- */
+.browser { position: absolute; left: 258px; top: 40px; width: 1404px; z-index: 10; animation: winopen .34s cubic-bezier(.1,.9,.2,1) both; }
+@keyframes winopen { from { transform: scale(1.03); } to { transform: scale(1); } }
+.browser .bar { font-size: 22px; }
+.browser .bar .live { display: inline-block; background: #e00000; color: #fff; padding: 1px 10px; margin-right: 10px; border: 2px solid #fff; }
+.viewport { width: 1390px; height: 794px; overflow: hidden; background: #000; border: 2px inset #808080; margin: 3px; }
+.viewport video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.status { display: flex; align-items: center; gap: 12px; margin: 3px; padding: 4px 8px; background: #c0c0c0; border-top: 2px solid #fff; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 18px; color: #000; }
+.prog { flex: 1; height: 22px; background: #fff; border: 2px inset #808080; }
+.prog i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #000080 0 14px, #c0c0c0 14px 18px); animation: fillbar 4.6s linear .2s both; }
+@keyframes fillbar { to { width: 100%; } }
+.status .marquee-strip { width: 420px; }
+/* ---- popups ---- */
+.popwrap { position: absolute; z-index: 20; }
+.popup { width: 100%; animation: popin .34s cubic-bezier(.1,.9,.2,1) var(--t) both, wob .4s ease-in-out calc(var(--t) + .34s) 3 both, flyout .5s ease-in 5.35s forwards; }
+@keyframes popin { from { transform: scale(.3); opacity: 0; } 70% { transform: scale(1.06); opacity: 1; } to { transform: scale(1); opacity: 1; } }
+@keyframes wob { 0%, 100% { transform: none; } 25% { transform: translate(-7px, 4px) rotate(-.8deg); } 75% { transform: translate(7px, -4px) rotate(.8deg); } }
+@keyframes flyout { to { transform: translate(var(--fx), var(--fy)) rotate(var(--fr, -24deg)) scale(.55); opacity: 0; } }
+.popup .bar { font-size: 19px; }
+.popup .body { font-family: 'Arimo', Arial, sans-serif; font-size: 25px; font-weight: 700; color: #000; }
+.popup .body small { display: block; font-size: 19px; font-weight: 400; margin-top: 6px; }
+.popup .row { display: flex; align-items: center; gap: 14px; }
+.popup .warn { width: 62px; height: 56px; }
+.popup .warn::after { font-size: 40px; }
+.popup .btns2 { display: flex; gap: 12px; justify-content: center; margin-top: 14px; }
+.popup .btn95 { font-size: 20px; padding: 8px 16px; border-width: 3px; }
+.cursor { left: 306px; top: 430px; z-index: 30; animation: cursmove 3.6s steps(1, end) 1.2s both; }
+@keyframes cursmove { 0% { left: 306px; top: 430px; } 45% { left: 306px; top: 430px; } 46% { left: 300px; top: 852px; } 78% { left: 300px; top: 852px; } 79% { left: 1560px; top: 300px; } 100% { left: 1560px; top: 300px; } }
+/* ---- side furniture ---- */
+.newburst.big { width: 150px; height: 150px; font-size: 40px; left: 36px; top: 60px; z-index: 25; animation: popin .4s cubic-bezier(.1,.9,.2,1) .25s both, geo-blink 1s steps(1, end) 3.2s infinite; }
+.vr { position: absolute; width: 150px; height: 14px; z-index: 12; }
+.tagblink { position: absolute; z-index: 25; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; color: #ff0000; background: #ffff00; border: 3px solid #000; padding: 4px 12px; animation: popin .3s cubic-bezier(.1,.9,.2,1) var(--t) both, geo-blink .9s steps(1, end) calc(var(--t) + .4s) infinite; }
+.spinner { position: absolute; z-index: 24; width: 132px; height: 132px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6b0, #ffd700 45%, #c98a00); border: 4px solid #7a5200; color: #7a5200; font-family: 'Anton', Impact, sans-serif; font-size: 78px; box-shadow: 4px 4px 0 rgba(0,0,0,.4); animation: coinflip 1.4s linear infinite; }
+@keyframes coinflip { 0% { transform: rotateY(0); } 100% { transform: rotateY(360deg); } }
+/* ---- the slam ---- */
+.flash { position: absolute; inset: 0; background: #fff; z-index: 34; opacity: 0; animation: flash .26s ease-out 5.35s forwards; }
+@keyframes flash { from { opacity: .95; } to { opacity: 0; } }
+.slam { position: absolute; left: 0; right: 0; top: 300px; text-align: center; z-index: 35; animation: slamin .42s cubic-bezier(.06,.9,.2,1) 5.35s both, pulse .5s ease-in-out 5.95s 2 alternate, shrinkup .55s ease 6.6s forwards; }
+@keyframes slamin { from { transform: scale(2.6); opacity: 0; } 65% { transform: scale(.94); opacity: 1; } to { transform: scale(1); opacity: 1; } }
+@keyframes pulse { to { transform: scale(1.04); } }
+@keyframes shrinkup { to { transform: translateY(-232px) scale(.62); } }
+.slam .wordart { font-size: 300px; }
+.slam .wordart .fill { background-image: linear-gradient(180deg, #fffbb0 0%, #ffe100 26%, #ff9a00 48%, #ff2a6d 72%, #b400ff 100%); }
+.lower { position: absolute; left: 0; right: 0; z-index: 35; text-align: center; }
+.lower.tag { top: 700px; animation: popin .36s cubic-bezier(.1,.9,.2,1) 7s both; }
+.lower.tag .comic { font-size: 62px; }
+.lower.url { top: 790px; animation: popin .36s cubic-bezier(.1,.9,.2,1) 7.45s both; }
+.lower.url .u { font-family: 'Anton', Impact, sans-serif; font-size: 104px; color: #ffff00; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0 0 26px #ff00c8; }
+.lower.sub { top: 902px; animation: popin .3s cubic-bezier(.1,.9,.2,1) 7.8s both; }
+.lower.sub span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 30px; color: #fff; background: #000080; border: 3px solid #fff; padding: 5px 16px; }
+.dalestamp { position: absolute; right: 70px; top: 470px; z-index: 36; transform: rotate(-11deg); }
+.dalestamp .in { animation: slamin .32s cubic-bezier(.06,.9,.2,1) 8.4s both; }
+.dalestamp .wordart { font-size: 190px; }
+/* ---- chrome: marquee + taskbar ---- */
+.botmarquee { position: absolute; left: 0; right: 0; top: 938px; height: 46px; background: #000080; border-top: 3px solid #fff; border-bottom: 3px solid #808080; color: #ffff00; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 30px; line-height: 40px; }
+.taskbar { position: absolute; left: 0; right: 0; bottom: 0; height: 66px; background: #c0c0c0; border-top: 4px outset #f0f0f0; display: flex; align-items: center; gap: 12px; padding: 0 10px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 24px; color: #000; }
+.taskbar .start { display: flex; align-items: center; gap: 8px; padding: 6px 16px; background: #c0c0c0; border: 4px outset #f0f0f0; }
+.taskbar .start b { font-size: 26px; }
+.taskbar .flag { width: 26px; height: 26px; background: conic-gradient(from 180deg, #ff0000 0 25%, #00a000 0 50%, #0000ff 0 75%, #ffd800 0); }
+.taskbar .task { padding: 6px 14px; background: #c0c0c0; border: 4px inset #f0f0f0; max-width: 620px; overflow: hidden; white-space: nowrap; }
+.taskbar .grow { flex: 1; }
+.taskbar .tray { display: flex; align-items: center; gap: 10px; padding: 5px 12px; border: 3px inset #f0f0f0; }
+.counter b { font-size: 22px; }
+</style></head><body>
+<div class="stage">
+  <div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.5"></div>
+  <div class="fx" id="rainback" style="z-index:5"></div>
+
+  <div class="win browser">
+    <div class="bar"><span><span class="live">LIVE</span>PITBULL.EXE - [FOOTAGE FROM A ROAD NOBODY DRIVES] - Netscape</span><span class="btns"><i>_</i><i>[]</i><i>X</i></span></div>
+    <div class="viewport"><video src="hype.webm" muted playsinline></video></div>
+    <div class="status"><span>Loading the prophecy...</span><span class="prog"><i></i></span><span class="marquee-strip" style="--ms:7s"><span>1337% complete &nbsp; * &nbsp; do not close this window &nbsp; * &nbsp; he is coming &nbsp; * &nbsp;</span></span></div>
+  </div>
+
+  <div class="newburst big">NEW!</div>
+  <div class="rainbow animated vr" style="left:34px; top:250px;"></div>
+  <div class="rainbow animated vr" style="right:34px; top:250px;"></div>
+  <div class="rainbow animated vr" style="left:34px; top:820px;"></div>
+  <div class="rainbow animated vr" style="right:34px; top:820px;"></div>
+  <div class="tagblink" style="left:24px; top:560px; --t:3.1s;">FREE MONEY</div>
+  <div class="tagblink" style="right:22px; top:120px; --t:1.5s;">NO RUGS !!</div>
+  <div class="tagblink" style="right:26px; top:560px; --t:3.7s;">100% LEGIT</div>
+  <div class="spinner" style="left:60px; top:400px;">$</div>
+  <div class="spinner" style="right:60px; top:690px;">$</div>
+
+  <div class="popwrap" style="left:16px; top:250px; width:520px; transform:rotate(-3deg)">
+    <div class="win popup" style="--t:0.8s; --fx:-820px; --fy:420px; --fr:-30deg">
+      <div class="bar"><span>WARNING.EXE</span><span class="btns"><i>X</i></span></div>
+      <div class="body"><div class="row"><div class="warn"></div><div>You are holding 0 $PITBULL.<small>The Pitbull has noticed.</small></div></div>
+      <div class="btns2"><span class="btn95 focus">BUY NOW</span><span class="btn95">later</span></div></div>
+    </div>
+  </div>
+  <div class="popwrap" style="left:1396px; top:150px; width:500px; transform:rotate(3deg)">
+    <div class="win popup" style="--t:1.7s; --fx:860px; --fy:-300px; --fr:26deg">
+      <div class="bar"><span>CONGRATULATIONS!!!</span><span class="btns"><i>X</i></span></div>
+      <div class="body">You are visitor 1,337.<small>You have been chosen by the Pitbull.</small>
+      <div class="btns2"><span class="btn95 focus">CLAIM</span></div></div>
+    </div>
+  </div>
+  <div class="popwrap" style="left:60px; top:700px; width:540px; transform:rotate(2deg)">
+    <div class="win popup" style="--t:2.6s; --fx:-760px; --fy:520px; --fr:-18deg">
+      <div class="bar"><span>PITBULL.EXE</span><span class="btns"><i>X</i></span></div>
+      <div class="body">PITBULL.EXE wants to make you rich.<small>Allow this program to continue?</small>
+      <div class="btns2"><span class="btn95 focus">ALLOW</span><span class="btn95">ALLOW</span></div></div>
+    </div>
+  </div>
+  <div class="popwrap" style="left:1360px; top:640px; width:530px; transform:rotate(-4deg)">
+    <div class="win popup" style="--t:3.5s; --fx:820px; --fy:460px; --fr:28deg">
+      <div class="bar"><span>DALE.HTM</span><span class="btns"><i>X</i></span></div>
+      <div class="body">Half bull. Half pitbull. All star.<small>thepitbull.fun - best viewed in Netscape</small></div>
+    </div>
+  </div>
+  <svg class="cursor" viewBox="0 0 32 32"><path d="M6 2 L6 26 L12 20 L16 30 L20 28 L16 18 L24 18 Z" fill="#fff" stroke="#000" stroke-width="2"/></svg>
+
+  <div class="fx" id="rainfront" style="z-index:28"></div>
+  <div class="fx" id="burst" style="z-index:33"></div>
+  <div class="flash"></div>
+  <div class="slam"><div class="wordart"><span class="ext">$PITBULL</span><span class="fill">$PITBULL</span></div></div>
+  <div class="lower tag"><span class="comic glow">THE MYTHICAL CREATURE THAT BRINGS WEALTH</span></div>
+  <div class="lower url"><span class="u">thepitbull.fun</span></div>
+  <div class="lower sub"><span>ROBINHOOD CHAIN &nbsp;*&nbsp; via PONS &nbsp;*&nbsp; LAUNCHING SOON</span></div>
+  <div class="dalestamp"><div class="in"><div class="wordart"><span class="ext">DALE.</span><span class="fill">DALE.</span></div></div></div>
+</div>
+
+<div class="chrome">
+  <div class="construction moving t"></div>
+  <div class="botmarquee"><div class="marquee-strip" style="--ms:13s"><span>*** $PITBULL *** THE MYTHICAL CREATURE THAT BRINGS WEALTH *** HALF BULL - HALF PITBULL - ALL STAR *** HE DOESN'T WATCH THE CHART, THE CHART WATCHES HIM *** ROBINHOOD CHAIN via PONS *** thepitbull.fun *** DALE ***</span></div></div>
+  <div class="taskbar">
+    <span class="start"><span class="flag"></span><b>Start</b></span>
+    <span class="task">PITBULL.EXE - [FOOTAGE FROM A ROAD...]</span>
+    <span class="task">FREE_MONEY.HTM</span>
+    <span class="grow"></span>
+    <span>You are visitor</span><span class="counter" id="counter"></span>
+    <span class="tray">13:37</span>
+  </div>
+</div>
+
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#rainback', 54, 12, { min: 44, max: 150, fall: true, delay: 0.25, spread: 3.4, dMin: 2.4, dMax: 6 });
+geoRain('#rainfront', 16, 44, { min: 40, max: 120, fall: true, delay: 0.8, spread: 4, dMin: 2.2, dMax: 5 });
+geoBurst('#burst', 36, 7, { delay: 5.35, cx: 50, cy: 44, dist: 820, min: 46, max: 140 });
+geoBurst('#burst', 18, 23, { delay: 8.4, cx: 78, cy: 46, dist: 620, min: 40, max: 110 });
+geoSparkles('#rainfront', 14, 9);
+
+/** The visitor counter ticks up for as long as the show runs. */
+let visitors = 1337;
+function renderCounter() {
+  const el = document.getElementById('counter');
+  el.innerHTML = String(visitors).padStart(7, '0').split('').map((d) => '<b>' + d + '</b>').join('');
+}
+renderCounter();
+
+window.startShow = () => {
+  document.documentElement.classList.remove('hold');
+  const v = document.querySelector('video');
+  v.currentTime = 0;
+  v.play();
+  setInterval(() => { visitors += 1 + Math.floor(Math.random() * 9); renderCounter(); }, 90);
+};
+</script>
+</body></html>

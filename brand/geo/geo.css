@@ -45,3 +45,34 @@ body { font-family: 'Tinos', 'Times New Roman', serif; }
 .warn::after { content: '!'; position: absolute; inset: 0; display: grid; place-items: end center; padding-bottom: 4px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 58px; color: #000; }
 .cursor { position: absolute; width: 44px; height: 44px; filter: drop-shadow(2px 2px 0 rgba(0,0,0,.5)); }
 .blinktag { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #ff0000; background: #ffff00; padding: 2px 8px; border: 2px solid #000; }
+
+/* --- motion: the animated-gif layer (falling money, blink, marquee, bursts) --- */
+.falling { animation: geo-fall var(--d, 4s) linear var(--dl, 0s) infinite; }
+@keyframes geo-fall {
+  from { transform: translateY(-260px) rotate(var(--r, 0deg)); }
+  to { transform: translateY(1340px) rotate(calc(var(--r, 0deg) + 220deg)); }
+}
+.bursting { animation: geo-burst 1.1s cubic-bezier(.1,.7,.3,1) var(--bd, 0s) both; }
+@keyframes geo-burst {
+  from { transform: translate(-50%, -50%) scale(.2) rotate(0deg); opacity: 1; }
+  70% { opacity: 1; }
+  to { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.1) rotate(var(--rr)); opacity: 0; }
+}
+.blink { animation: geo-blink 1s steps(1, end) infinite; }
+@keyframes geo-blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+.twinkle { animation: geo-twinkle .9s ease-in-out infinite alternate; }
+@keyframes geo-twinkle { from { transform: scale(.7) rotate(0deg); opacity: .5; } to { transform: scale(1.15) rotate(45deg); opacity: 1; } }
+.marquee-strip { overflow: hidden; white-space: nowrap; }
+.marquee-strip > span { display: inline-block; padding-left: 100%; animation: geo-marquee var(--ms, 14s) linear infinite; }
+@keyframes geo-marquee { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+.construction.moving { animation: geo-stripe 1.1s linear infinite; background-size: 51px 51px; }
+@keyframes geo-stripe { from { background-position: 0 0; } to { background-position: 51px 0; } }
+.rainbow.animated { animation: geo-hue 2.4s linear infinite; }
+@keyframes geo-hue { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }
+.spin { animation: geo-spin 2.6s linear infinite; }
+@keyframes geo-spin { to { transform: rotate(360deg); } }
+
+/* god rays behind the creature: static in a still, spinning on the site */
+.rays { position: absolute; inset: -30%; background: repeating-conic-gradient(from 0deg, rgba(255,231,140,.55) 0deg 5deg, rgba(255,231,140,0) 5deg 13deg); }
+.rays.turning { animation: geo-spin 26s linear infinite; }
+.halo { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgba(255,215,0,.6), rgba(255,215,0,0) 60%); }

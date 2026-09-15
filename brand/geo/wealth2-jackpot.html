@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.top { position: absolute; left: 0; right: 0; top: 34px; text-align: center; z-index: 8; }
+.top .wordart { font-size: 150px; }
+.top .wordart .fill { background-image: linear-gradient(180deg, #fffbb0, #ffe100 30%, #ff9a00 58%, #ff2a6d 82%, #b400ff); }
+.machine { position: absolute; left: 64px; top: 236px; width: 700px; z-index: 6; }
+.machine .bar { font-size: 21px; }
+.reels { display: flex; gap: 14px; justify-content: center; padding: 18px; background: #c0c0c0; }
+.reel { width: 200px; height: 236px; background: #fff; border: 5px inset #808080; display: grid; place-items: center; font-family: 'Anton', Impact, sans-serif; font-size: 170px; color: #00a000; text-shadow: 4px 4px 0 rgba(0,0,0,.25); }
+.lamps { display: flex; gap: 12px; justify-content: center; padding: 0 0 14px; }
+.lamps i { width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #ff0000 60%, #700); border: 3px solid #000; display: block; }
+.lamps i:nth-child(even) { background: radial-gradient(circle at 35% 30%, #fff, #ffd800 60%, #a07000); }
+.led { margin: 0 18px 18px; padding: 10px; background: #000; border: 4px inset #555; text-align: center; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 30px; color: #39ff14; }
+.fig { position: absolute; right: -40px; bottom: 120px; height: 62%; z-index: 7; filter: drop-shadow(10px 10px 0 rgba(0,0,0,.35)); }
+.speech { position: absolute; right: 60px; top: 250px; width: 400px; z-index: 8; background: #fff; border: 4px solid #000; border-radius: 22px; padding: 16px 20px; box-shadow: 6px 6px 0 rgba(0,0,0,.4); }
+.speech .comic { font-size: 34px; color: #000; }
+.speech::after { content: ''; position: absolute; left: 60px; bottom: -34px; width: 0; height: 0; border: 18px solid transparent; border-top-color: #000; }
+.pile { position: absolute; left: 0; right: 0; bottom: 18px; height: 250px; z-index: 5; }
+.foot { position: absolute; left: 0; right: 0; bottom: 48px; text-align: center; z-index: 9; }
+.foot span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; color: #ffff00; background: #000080; border: 3px solid #fff; padding: 6px 16px; }
+</style></head><body><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.45"></div>
+<div class="fx" id="fxback" style="z-index:2"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top"><div class="wordart"><span class="ext">JACKPOT!!!</span><span class="fill">JACKPOT!!!</span></div></div>
+<div class="win machine">
+  <div class="bar"><span>FORTUNE.EXE - [SPIN TO GET RICH]</span><span class="btns"><i>_</i><i>X</i></span></div>
+  <div class="body" style="padding:0">
+    <div class="lamps" style="padding-top:14px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="reels"><div class="reel">$</div><div class="reel">$</div><div class="reel">$</div></div>
+    <div class="led">HOLDER DETECTED - PAYING OUT FOREVER</div>
+    <div class="lamps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</div>
+<img class="fig" src="cutout.png">
+<div class="speech"><div class="comic">you didn't win.<br><b>you were chosen.</b></div></div>
+<div class="pile" id="pile"></div>
+<div class="fx" id="fxfront" style="z-index:8"></div>
+<div class="foot"><span>$PITBULL &nbsp;*&nbsp; ROBINHOOD CHAIN via PONS &nbsp;*&nbsp; thepitbull.fun</span></div>
+<script src="geo-fx.js"></script>
+<script>
+geoPile('#pile', 26, 3, { min: 52, max: 96, rows: 3, step: 44 });
+geoRain('#fxback', 26, 71, { min: 42, max: 128 });
+geoRain('#fxfront', 8, 5, { min: 38, max: 92, avoid: [{ x0: 4, y0: 18, x1: 96, y1: 78 }] });
+geoSparkles('#fxfront', 10, 12, { avoid: [{ x0: 10, y0: 22, x1: 92, y1: 72 }] });
+</script>
+</div></body></html>

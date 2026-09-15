@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; background: #000; }
+.bg { position: absolute; inset: 0; }
+.bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; filter: saturate(1.1); }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.top { position: absolute; left: 0; right: 0; top: 30px; text-align: center; z-index: 9; }
+.top .comic { font-size: 50px; }
+.win.dl { position: absolute; left: 60px; right: 60px; top: 380px; z-index: 8; }
+.win.dl .bar { font-size: 23px; }
+.win.dl .body { padding: 20px; }
+.line { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 34px; color: #000; }
+.line small { display: block; font-size: 23px; font-weight: 400; margin-top: 8px; }
+.prog { margin-top: 16px; height: 42px; background: #fff; border: 3px inset #808080; }
+.prog i { display: block; height: 100%; width: 100%; background: repeating-linear-gradient(90deg, #000080 0 22px, #c0c0c0 22px 28px); }
+.pct { display: flex; justify-content: space-between; margin-top: 8px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 25px; color: #000; }
+.btns2 { display: flex; gap: 16px; justify-content: center; margin-top: 18px; }
+.mail { position: absolute; left: 90px; bottom: 210px; width: 480px; z-index: 8; transform: rotate(-2deg); }
+.mail .bar { font-size: 19px; }
+.mail .body { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 25px; color: #000; }
+.mail .body small { display: block; font-weight: 400; font-size: 20px; margin-top: 6px; }
+.bottom { position: absolute; left: 0; right: 0; bottom: 92px; text-align: center; z-index: 9; }
+.bottom .wordart { font-size: 118px; }
+.bottom .wordart .fill { background-image: linear-gradient(180deg, #ffffff, #ffe100 42%, #ff9a00 70%, #ff2a6d); }
+.foot { position: absolute; left: 0; right: 0; bottom: 44px; text-align: center; z-index: 9; }
+.foot span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 25px; color: #ffff00; background: rgba(0,0,0,.78); border: 3px solid #ffff00; padding: 5px 14px; }
+</style></head><body><div class="m">
+<div class="bg"><img src="../pitbull-ref.jpg"></div>
+<div class="fx" id="fxback" style="z-index:3"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top"><div class="comic glow">~*~ INCOMING TRANSMISSION ~*~</div></div>
+<div class="win dl">
+  <div class="bar"><span>WEALTH.EXE - transferring</span><span class="btns"><i>_</i><i>X</i></span></div>
+  <div class="body">
+    <div class="line">Transferring fortune to your wallet...<small>Do not turn off your computer. Do not sell.</small></div>
+    <div class="prog"><i></i></div>
+    <div class="pct"><span>420% complete</span><span>Time remaining: forever</span></div>
+    <div class="btns2"><span class="btn95 focus">HOLD</span><span class="btn95">panic sell</span></div>
+  </div>
+</div>
+<div class="win mail">
+  <div class="bar"><span>Inbox - 1 new message</span><span class="btns"><i>X</i></span></div>
+  <div class="body">From: THE PITBULL<small>Subject: your bag. I handled it. Dale.</small></div>
+</div>
+<div class="bottom"><div class="wordart"><span class="ext">WEALTH INCOMING</span><span class="fill">WEALTH INCOMING</span></div></div>
+<div class="fx" id="fxfront" style="z-index:9"></div>
+<div class="foot"><span>$PITBULL on ROBINHOOD CHAIN via PONS &nbsp;|&nbsp; thepitbull.fun</span></div>
+<script src="geo-fx.js"></script>
+<script>
+var face = [{ x0: 28, y0: 2, x1: 74, y1: 30 }];
+geoRain('#fxback', 30, 34, { min: 44, max: 136, avoid: face });
+geoRain('#fxfront', 7, 90, { min: 38, max: 90, avoid: [{ x0: 2, y0: 30, x1: 98, y1: 100 }].concat(face) });
+geoSparkles('#fxfront', 12, 27, { avoid: face });
+</script>
+</div></body></html>
