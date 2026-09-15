@@ -1,0 +1,37 @@
+{
+  "skill_name": "robinhood-launch",
+  "evals": [
+    {
+      "id": 0,
+      "name": "launch-day-plan",
+      "prompt": "Ik launch morgen om 20:00 $BLOB op Pons (Robinhood Chain, ETH als pair). Mijn server is dezelfde opzet als Plantoshi (repo Cryptoleee/flora: server op Railway, site op Vercel), nu nog in prelaunch. Geef me de complete launch-day checklist, de Railway raw env die ik moet plakken (alleen het token-adres mag open blijven) en waar ik na de launch moet kijken of alles werkt. Schrijf het als een markdown-bestand launch-plan.md. Geen tools voor beeldgeneratie gebruiken, dit is planning.",
+      "expected_output": "launch-plan.md: T-minus checklist, complete Railway raw env block with PONS/START_BLOCK guidance, /health verification, fee + bridging notes",
+      "files": [],
+      "assertions": [
+        "launch-plan.md exists and contains a complete Railway raw env block (KEY=\"value\" lines) with TOKEN_ADDRESS as the only open value",
+        "The env block enables Pons curve watching (PONS=1) and explains START_BLOCK (needed only when deploying more than ~1 h after launch)",
+        "The plan says to remove/disable PRELAUNCH at launch and that state is keyed by token address (no manual reset needed, /admin/reset optional)",
+        "Verification step names GET /health and the fields to check (launch block / pons, pools, blocksBehind or lastError)",
+        "The plan states the Pons launch fee is paid in ETH on Robinhood Chain and gives the bridging path (Kraken cannot withdraw to Robinhood Chain; go via Arbitrum/Base + bridge)",
+        "The checklist includes the livestream/X Producer step or the launch post, ordered by time (T-minus style)",
+        "The plan warns about at least one known trap: Vercel deployments blocked by git author, Railway health check timeout, or secrets pasted with <> brackets"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "brand-and-campaign-plan",
+      "prompt": "Nieuw project op Robinhood Chain: 'Moonpig', een cartoon varken dat dikker wordt van buys en slanker van sells. Maak een plan voor de brand assets (welke assets, formaten, welke modellen/tools en in welke volgorde) en een posting-schema voor de eerste week: twee posts per dag, waarvan zes video's, met de posttekst per post. Schrijf het als campaign-plan.md. Alleen plannen, niets genereren.",
+      "expected_output": "campaign-plan.md: asset list with sizes and the GPT Image 2.5 + Minimax H3 pipeline, 14-post schedule with 6 videos and texts",
+      "files": [],
+      "assertions": [
+        "campaign-plan.md names GPT Image 2.5 (gpt-2-mini) for stills and Minimax H3 (minimax-video-3_0) for motion",
+        "The plan locks a style with reference images (mascot + scene passed as references on every generation)",
+        "The asset list includes pfp, banner, announcement (3:2), og image (1200x630), explainer video, GIF pack, stream thumbnail (1920x1080) and an end card, with sizes/ratios",
+        "The schedule has exactly 14 posts over 7 days, two per day, six of which are videos, each with a post text",
+        "Videos are planned as ~10 s H3 segments from a GPT start frame with an end card (url · buy · hold · grow) and 1344x768 or 16:9 output",
+        "The plan gives a credit estimate (about 100 per image, about 920 per 10 s video) or a total budget",
+        "Roadmap/feature claims in the posts are limited to buildable features (realism rule) rather than vague promises"
+      ]
+    }
+  ]
+}

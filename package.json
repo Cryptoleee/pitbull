@@ -1,0 +1,12 @@
+{
+  "name": "pitbull",
+  "version": "0.1.0",
+  "private": true,
+  "description": "$PITBULL — the mythical creature that brings wealth. server/ deploys to Railway, web/ to Vercel.",
+  "scripts": {
+    "build": "npm --prefix web ci && npm --prefix web run build",
+    "dev:web": "npm --prefix web run dev",
+    "dev:server": "npm --prefix server run dev",
+    "test": "npm --prefix server test"
+  }
+}
