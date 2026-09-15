@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 9; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 9; }
+.hdr { position: absolute; left: 0; right: 0; top: 26px; text-align: center; z-index: 9; }
+.hdr .blinktag { font-size: 25px; }
+.panel { position: absolute; left: 40px; right: 40px; z-index: 4; }
+.panel.a { top: 74px; height: 420px; }
+.panel.b { top: 566px; height: 578px; }
+.panel img { border: 0 !important; }
+.pic { position: absolute; inset: 8px; overflow: hidden; border: 3px inset #808080; }
+.pic .fx { z-index: 1; }
+.fig { position: absolute; z-index: 2; }
+.panel.a .pic { background: #9a9a9a; }
+.panel.a .fig { left: 50%; top: 50%; transform: translate(-50%, -50%); height: 60%; filter: grayscale(1) brightness(.6) contrast(.92); }
+.panel.b .pic { background: linear-gradient(180deg, #8fcaff 0%, #cfe9ff 55%, #ffe9a8 100%); }
+.panel.b .pic::before { content: ''; position: absolute; left: 6%; top: 4%; width: 46%; height: 92%; background: radial-gradient(ellipse at 50% 50%, rgba(255,215,0,.55), rgba(255,215,0,0) 68%); z-index: 1; }
+.panel.b .fig { left: 4%; bottom: 0; height: 97%; filter: saturate(1.2) contrast(1.05) drop-shadow(8px 8px 0 rgba(0,0,0,.28)); }
+.lab { position: absolute; left: 18px; top: 18px; z-index: 6; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 33px; padding: 5px 18px; border: 3px solid #000; }
+.lab.grey { background: #808080; color: #fff; }
+.lab.gold { background: #ffff00; color: #ff0000; }
+.cap { position: absolute; left: 20px; bottom: 18px; z-index: 6; }
+.cap .comic { font-size: 31px; background: #fff; padding: 3px 12px; border: 2px solid #000; }
+.dale { position: absolute; right: 26px; top: 84px; z-index: 6; text-align: right; }
+.dale .wordart { font-size: 132px; }
+.dale .sub { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; color: #000080; background: #ffff00; border: 2px solid #000; padding: 3px 10px; display: inline-block; margin-top: 6px; }
+.bank { position: absolute; right: 20px; bottom: 18px; z-index: 6; width: 330px; }
+.bank .bar { font-size: 17px; }
+.bank .body { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 28px; color: #000; text-align: center; padding: 9px; }
+.mid { position: absolute; left: 0; right: 0; top: 500px; height: 58px; display: flex; align-items: center; justify-content: center; gap: 18px; z-index: 8; }
+.mid .rainbow { width: 250px; }
+.arrow { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 40px; color: #00a000; background: #fff; border: 3px solid #000; padding: 2px 16px; }
+</style></head><body><div class="m">
+<div class="sky"></div><div class="faces"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="hdr"><span class="blinktag">100% REAL RESULTS - NOT CLICKBAIT</span></div>
+<div class="frame panel a">
+  <div class="pic">
+    <img class="fig" src="cutout.png">
+  </div>
+  <span class="lab grey">ME BEFORE $PITBULL</span>
+  <div class="cap"><div class="comic blue">small. grey. poor. no bag.</div></div>
+  <div class="win bank"><div class="bar"><span>Bank.exe</span><span class="btns"><i>X</i></span></div><div class="body">BALANCE: $4.12</div></div>
+</div>
+<div class="mid"><div class="rainbow"></div><span class="arrow">&#9650; BUY $PITBULL &#9650;</span><div class="rainbow"></div></div>
+<div class="frame panel b">
+  <div class="pic">
+    <div class="fx" id="fxin"></div>
+    <img class="fig" src="cutout.png">
+  </div>
+  <span class="lab gold">ME AFTER $PITBULL</span>
+  <div class="dale"><div class="wordart"><span class="ext">DALE.</span><span class="fill">DALE.</span></div><div class="sub">horns. aviators. bag.</div></div>
+  <div class="win bank"><div class="bar"><span>Bank.exe</span><span class="btns"><i>X</i></span></div><div class="body" style="color:#00a000">BALANCE: $1,337,420.69</div></div>
+</div>
+<div class="fx" id="fxfront" style="z-index:7"></div>
+<script src="geo-fx.js"></script>
+<script>
+geoRain('#fxin', 22, 5, { min: 30, max: 92, coins: 0.3 });
+geoRain('#fxfront', 9, 66, { min: 38, max: 96, x1: 7 });
+geoRain('#fxfront', 9, 91, { min: 38, max: 96, x0: 94 });
+geoSparkles('#fxfront', 8, 33, { avoid: [{ x0: 8, y0: 6, x1: 92, y1: 96 }] });
+</script>
+</div></body></html>

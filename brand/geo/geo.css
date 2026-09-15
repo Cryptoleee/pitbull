@@ -9,7 +9,7 @@ body { font-family: 'Tinos', 'Times New Roman', serif; }
 .frame { background: #c0c0c0; border: 4px outset #e8e8e8; padding: 6px; box-shadow: 4px 4px 0 #000; }
 .frame img { display: block; border: 2px inset #808080; }
 /* WordArt: gradient fill on top of a black 3D extrusion */
-.wordart { position: relative; font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; line-height: .95; letter-spacing: .01em; }
+.wordart { position: relative; display: inline-block; font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; line-height: .95; letter-spacing: .01em; }
 .wordart .fill, .wordart .ext { display: block; white-space: nowrap; }
 .wordart .ext { position: absolute; inset: 0; color: #1a0a3a; text-shadow: 1px 1px 0 #1a0a3a, 2px 2px 0 #1a0a3a, 3px 3px 0 #1a0a3a, 4px 4px 0 #1a0a3a, 5px 5px 0 #1a0a3a, 6px 6px 0 #1a0a3a, 7px 7px 0 #1a0a3a, 8px 8px 0 #1a0a3a, 9px 9px 0 #1a0a3a, 10px 10px 0 #1a0a3a, 11px 11px 0 #1a0a3a, 12px 12px 0 #1a0a3a, 16px 16px 18px rgba(0,0,0,.55); }
 .wordart .fill { position: relative; background: linear-gradient(180deg, #fffbb0 0%, #ffe100 28%, #ff9a00 50%, #ff2a6d 72%, #b400ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1.5px #2a0050; }
@@ -26,3 +26,22 @@ body { font-family: 'Tinos', 'Times New Roman', serif; }
 .counter { display: inline-flex; gap: 2px; padding: 3px; background: #000; border: 2px inset #999; }
 .counter b { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #39ff14; background: #111; padding: 0 5px; font-size: 20px; border-right: 1px solid #333; }
 .marquee { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #fff; background: #000080; padding: 4px 12px; border: 2px outset #8080ff; }
+/* --- chaos layer: dollar signs, coins, dialogs, panels --- */
+.fx { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.dollar { position: absolute; font-family: 'Anton', Impact, sans-serif; color: #00c000; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 5px 5px 0 rgba(0,0,0,.35); }
+.coin { position: absolute; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6b0, #ffd700 45%, #c98a00); border: 3px solid #7a5200; color: #7a5200; font-family: 'Anton', Impact, sans-serif; box-shadow: 3px 3px 0 rgba(0,0,0,.4); }
+.money-tile { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext x='20' y='80' font-family='Impact,sans-serif' font-size='80' fill='%2300a000' opacity='0.30'%3E%24%3C/text%3E%3C/svg%3E"); }
+/* Windows 95 window + dialog */
+.win { background: #c0c0c0; border: 4px outset #f0f0f0; box-shadow: 8px 8px 0 rgba(0,0,0,.5); }
+.win .bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 3px; padding: 4px 6px; background: linear-gradient(90deg, #000080, #1084d0); color: #fff; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 20px; }
+.win .bar .btns { display: flex; gap: 3px; }
+.win .bar .btns i { width: 26px; height: 24px; display: grid; place-items: center; background: #c0c0c0; border: 2px outset #f0f0f0; color: #000; font-style: normal; font-size: 16px; line-height: 1; }
+.win .body { margin: 3px; padding: 14px; background: #c0c0c0; }
+.win .body.white { background: #fff; border: 2px inset #808080; padding: 0; }
+.btn95 { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 26px; padding: 12px 26px; background: #c0c0c0; border: 4px outset #f0f0f0; color: #000; }
+.btn95.focus { outline: 2px dotted #000; outline-offset: -8px; }
+.warn { width: 92px; height: 82px; position: relative; flex: none; }
+.warn::before { content: ''; position: absolute; inset: 0; background: #ffd800; clip-path: polygon(50% 0, 100% 100%, 0 100%); border-radius: 6px; }
+.warn::after { content: '!'; position: absolute; inset: 0; display: grid; place-items: end center; padding-bottom: 4px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 58px; color: #000; }
+.cursor { position: absolute; width: 44px; height: 44px; filter: drop-shadow(2px 2px 0 rgba(0,0,0,.5)); }
+.blinktag { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #ff0000; background: #ffff00; padding: 2px 8px; border: 2px solid #000; }

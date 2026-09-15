@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; background: #000; }
+.bg { position: absolute; inset: 0; }
+.bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; z-index: 8; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; z-index: 8; }
+.top { position: absolute; top: 26px; left: 0; right: 0; text-align: center; z-index: 8; }
+.top .l1 { font-size: 46px; }
+.win { position: absolute; left: 66px; right: 66px; top: 470px; z-index: 6; }
+.win .bar { font-size: 24px; }
+.row { display: flex; align-items: center; gap: 24px; }
+.msg { font-family: 'Arimo', Arial, sans-serif; font-size: 39px; font-weight: 700; color: #000; line-height: 1.2; }
+.msg small { display: block; font-size: 25px; font-weight: 400; margin-top: 10px; }
+.btns2 { display: flex; gap: 22px; justify-content: center; margin-top: 24px; }
+.cursor { left: 366px; top: 642px; z-index: 7; }
+.bottom { position: absolute; left: 0; right: 0; bottom: 106px; text-align: center; z-index: 8; }
+.bottom .wordart { font-size: 132px; }
+.foot { position: absolute; left: 0; right: 0; bottom: 44px; text-align: center; z-index: 8; }
+.foot span { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 23px; color: #ffff00; background: rgba(0,0,0,.72); padding: 4px 14px; border: 2px solid #ffff00; }
+</style></head><body><div class="m">
+<div class="bg"><img src="../pitbull-road.png"></div>
+<div class="fx" id="fxback" style="z-index:2"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top"><div class="comic glow l1">~*~ SYSTEM MESSAGE ~*~</div></div>
+<div class="win">
+  <div class="bar"><span>PITBULL.EXE</span><span class="btns"><i>X</i></span></div>
+  <div class="body">
+    <div class="row"><div class="warn"></div><div class="msg">You are holding <u>0</u> $PITBULL.<small>The Pitbull has noticed. This is a critical error.</small></div></div>
+    <div class="btns2"><span class="btn95 focus">BUY $PITBULL</span><span class="btn95">I like being poor</span></div>
+  </div>
+</div>
+<svg class="cursor" viewBox="0 0 32 32"><path d="M6 2 L6 26 L12 20 L16 30 L20 28 L16 18 L24 18 Z" fill="#fff" stroke="#000" stroke-width="2"/></svg>
+<div class="bottom"><div class="wordart"><span class="ext">$PITBULL</span><span class="fill">$PITBULL</span></div></div>
+<div class="foot"><span>thepitbull.fun &nbsp;|&nbsp; ROBINHOOD CHAIN via PONS &nbsp;|&nbsp; DALE.</span></div>
+<div class="fx" id="fxfront" style="z-index:7"></div>
+<script src="geo-fx.js"></script>
+<script>
+var face = [{ x0: 26, y0: 4, x1: 76, y1: 40 }];
+geoRain('#fxback', 30, 77, { min: 40, max: 132, avoid: face });
+geoRain('#fxfront', 7, 8, { min: 36, max: 86, avoid: [{ x0: 0, y0: 34, x1: 100, y1: 100 }].concat(face) });
+geoSparkles('#fxfront', 10, 21, { avoid: face });
+</script>
+</div></body></html>

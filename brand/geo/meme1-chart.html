@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+.m { position: relative; width: 1200px; height: 1200px; overflow: hidden; }
+.construction.t { position: absolute; left: 0; right: 0; top: 0; height: 18px; border-width: 0 0 2px; }
+.construction.b { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; border-width: 2px 0 0; }
+.top { position: absolute; top: 32px; left: 0; right: 0; text-align: center; z-index: 6; }
+.top .l1 { font-size: 52px; }
+.top .l2 { font-size: 34px; margin-top: 4px; }
+.tick { position: absolute; left: 62px; top: 152px; z-index: 6; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 24px; color: #000; background: #ffff00; border: 2px solid #000; padding: 3px 10px; }
+.win { position: absolute; left: 60px; top: 194px; width: 1080px; z-index: 3; }
+.win .body.white { height: 470px; position: relative; }
+.win svg { display: block; width: 100%; height: 100%; }
+.ylab { position: absolute; left: 12px; top: 8px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 25px; color: #000; }
+.xlab { position: absolute; right: 16px; bottom: 8px; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 25px; color: #000; }
+.cut { position: absolute; right: -14px; top: 300px; width: 620px; z-index: 5; filter: drop-shadow(10px 10px 0 rgba(0,0,0,.35)); }
+.bottom { position: absolute; left: 0; right: 40px; bottom: 116px; text-align: center; z-index: 6; }
+.bottom .wordart { font-size: 92px; }
+.bottom .wordart .fill { background-image: linear-gradient(180deg, #fffbb0, #ffe100 30%, #ff9a00 55%, #ff2a6d 80%, #b400ff); }
+.foot { position: absolute; left: 0; right: 0; bottom: 46px; display: flex; align-items: center; justify-content: center; gap: 18px; z-index: 6; font-family: 'Arimo', Arial, sans-serif; font-weight: 700; font-size: 21px; color: #000080; }
+.foot .white { background: rgba(255,255,255,.85); padding: 2px 8px; }
+</style></head><body><div class="m">
+<div class="sky"></div><div class="faces"></div><div class="money-tile" style="opacity:.45"></div>
+<div class="fx" id="fxback" style="z-index:2"></div>
+<div class="construction t"></div><div class="construction b"></div>
+<div class="top"><div class="comic glow l1">*** HE DOESN'T WATCH THE CHART ***</div><div class="comic pink l2">he has never opened a chart in his life</div></div>
+<div class="tick">$PITBULL / ETH &nbsp;+999,999,999%</div>
+<div class="win">
+  <div class="bar"><span>PITBULL.EXE - [Chart] - Netscape</span><span class="btns"><i>_</i><i>[]</i><i>X</i></span></div>
+  <div class="body white">
+    <svg id="chart" data-w="1040" data-h="470" viewBox="0 0 1040 470" preserveAspectRatio="none"></svg>
+    <div class="ylab">$1,000,000,000</div><div class="xlab">TODAY</div>
+  </div>
+</div>
+<img class="cut" src="cutout.png">
+<div class="bottom"><div class="wordart"><span class="ext">THE CHART WATCHES HIM</span><span class="fill">THE CHART WATCHES HIM</span></div></div>
+<div class="foot"><span class="blinktag">NO CHART READING REQUIRED</span> <span class="white">$PITBULL on ROBINHOOD CHAIN</span> <span class="red white">thepitbull.fun</span></div>
+<div class="fx" id="fxfront" style="z-index:7"></div>
+<script src="geo-fx.js"></script>
+<script>
+geoChart('#chart', 9);
+geoRain('#fxback', 34, 12, { min: 44, max: 130, avoid: [{ x0: 2, y0: 18, x1: 26, y1: 26 }] });
+geoRain('#fxfront', 8, 31, { min: 40, max: 92, avoid: [{ x0: 40, y0: 60, x1: 100, y1: 100 }, { x0: 0, y0: 0, x1: 100, y1: 16 }] });
+geoSparkles('#fxfront', 9, 4, { avoid: [{ x0: 20, y0: 76, x1: 100, y1: 94 }] });
+</script>
+</div></body></html>

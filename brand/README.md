@@ -19,3 +19,8 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `posters/post3-star.png/.jpg` | post 3 "A Rising Star" (stage light, confetti, DALE.) | 1920×1080 | HTML/CSS over the reference |
 | `video/pitbull-hype.mp4` | H3 hype video: stands, walks in, double-biceps flex with dust, holds; sound, no end card | 1344×768 24 fps, 10 s | Minimax H3 from `pitbull-road.png` |
 | `geo/banner.png/.jpg` | X banner, Geocities style: cloud tile, faint tiled faces, WordArt title, Win95 bevel frames, NEW! burst, sparkles, visitor counter, construction stripes | 1500×500 | `geo/banner.html` + `geo/geo.css` (the style sheet the site will reuse), rendered with `scripts/render_poster.mjs` |
+| `geo/meme1-chart.png/.jpg` | meme: MS Paint chart only goes up, creature standing on it, "THE CHART WATCHES HIM" | 1200×1200 | `geo/meme1-chart.html` |
+| `geo/meme2-warning.png/.jpg` | meme: Win95 dialog "You are holding 0 $PITBULL" with BUY / "I like being poor" | 1200×1200 | `geo/meme2-warning.html` |
+| `geo/meme3-beforeafter.png/.jpg` | meme: before (small, grey, $4.12) vs after (gold, dollar rain, DALE.) | 1200×1200 | `geo/meme3-beforeafter.html` |
+| `geo/cutout.png` | the creature on transparent background, alpha-trimmed | 490×664 | Magnific background removal on `pitbull-road.png` + `scripts/trim_alpha.mjs` |
+| `geo/geo-fx.js` | shared chaos helpers: seeded dollar/coin rain with keep-clear regions, sparkles, MS Paint candle chart | — | written |
