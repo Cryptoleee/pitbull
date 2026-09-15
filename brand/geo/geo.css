@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&family=Tinos:ital,wght@0,400;0,700;1,700&family=Arimo:wght@400;700&family=Anton&display=swap');
+* { box-sizing: border-box; margin: 0; }
+html, body { overflow: hidden; }
+body { font-family: 'Tinos', 'Times New Roman', serif; }
+/* the Leo page: pale blue clouds with faint faces tiled behind everything */
+.sky { position: absolute; inset: 0; background: #7fbfff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='6' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.62  0 0 0 0 0.82  0 0 0 0 1  0 0 0 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='table' tableValues='0.22 0.98'/%3E%3CfeFuncG type='table' tableValues='0.52 0.99'/%3E%3CfeFuncB type='table' tableValues='0.86 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23c)'/%3E%3C/svg%3E"); background-size: 512px 512px; }
+.faces { position: absolute; inset: 0; background: url('face.png') repeat; background-size: 190px 190px; opacity: .09; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; }
+/* Windows 95 bevel frame */
+.frame { background: #c0c0c0; border: 4px outset #e8e8e8; padding: 6px; box-shadow: 4px 4px 0 #000; }
+.frame img { display: block; border: 2px inset #808080; }
+/* WordArt: gradient fill on top of a black 3D extrusion */
+.wordart { position: relative; font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; line-height: .95; letter-spacing: .01em; }
+.wordart .fill, .wordart .ext { display: block; white-space: nowrap; }
+.wordart .ext { position: absolute; inset: 0; color: #1a0a3a; text-shadow: 1px 1px 0 #1a0a3a, 2px 2px 0 #1a0a3a, 3px 3px 0 #1a0a3a, 4px 4px 0 #1a0a3a, 5px 5px 0 #1a0a3a, 6px 6px 0 #1a0a3a, 7px 7px 0 #1a0a3a, 8px 8px 0 #1a0a3a, 9px 9px 0 #1a0a3a, 10px 10px 0 #1a0a3a, 11px 11px 0 #1a0a3a, 12px 12px 0 #1a0a3a, 16px 16px 18px rgba(0,0,0,.55); }
+.wordart .fill { position: relative; background: linear-gradient(180deg, #fffbb0 0%, #ffe100 28%, #ff9a00 50%, #ff2a6d 72%, #b400ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1.5px #2a0050; }
+.comic { font-family: 'Comic Neue', 'Comic Sans MS', cursive; font-weight: 700; }
+.glow { color: #ffff00; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 14px #ff00c8; }
+.pink { color: #ff1493; text-shadow: 2px 2px 0 #000; }
+.red { color: #ff0000; text-shadow: 2px 2px 0 #000; }
+.blue { color: #0000ee; text-decoration: underline; }
+.rainbow { height: 10px; background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33cc33, #0099ff, #6633ff, #ff00cc, #ff0000); border: 2px outset #fff; }
+.sparkle { position: absolute; width: 46px; height: 46px; background: radial-gradient(circle, #fff 0 4px, transparent 5px), conic-gradient(from 0deg, transparent 0 40deg, #fff 45deg, transparent 50deg, transparent 130deg, #fff 135deg, transparent 140deg, transparent 220deg, #fff 225deg, transparent 230deg, transparent 310deg, #fff 315deg, transparent 320deg); filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 2px #ffe100); }
+.sparkle.s { width: 26px; height: 26px; }
+.newburst { position: absolute; width: 96px; height: 96px; display: grid; place-items: center; background: #ff0000; clip-path: polygon(50% 0%, 61% 16%, 79% 8%, 82% 27%, 100% 33%, 89% 50%, 100% 67%, 82% 73%, 79% 92%, 61% 84%, 50% 100%, 39% 84%, 21% 92%, 18% 73%, 0% 67%, 11% 50%, 0% 33%, 18% 27%, 21% 8%, 39% 16%); font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #ffff00; font-size: 26px; transform: rotate(-12deg); }
+.construction { height: 22px; background: repeating-linear-gradient(135deg, #ffd800 0 18px, #000 18px 36px); border: 2px solid #000; }
+.counter { display: inline-flex; gap: 2px; padding: 3px; background: #000; border: 2px inset #999; }
+.counter b { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #39ff14; background: #111; padding: 0 5px; font-size: 20px; border-right: 1px solid #333; }
+.marquee { font-family: 'Arimo', Arial, sans-serif; font-weight: 700; color: #fff; background: #000080; padding: 4px 12px; border: 2px outset #8080ff; }

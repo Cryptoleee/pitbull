@@ -17,6 +17,5 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `posters/post1-meet.png/.jpg` | post 1 "Meet the Pitbull" | 1920×1080 | HTML/CSS over the reference |
 | `posters/post2-prophecy.png/.jpg` | post 2 "The Prophecy" (seven signs) | 1920×1080 | HTML/CSS over the reference |
 | `posters/post3-star.png/.jpg` | post 3 "A Rising Star" (stage light, confetti, DALE.) | 1920×1080 | HTML/CSS over the reference |
-| `posters/endcard.png/.jpg` | video end card | 1920×1080 | HTML/CSS over the reference |
-| `video/pitbull-hype.mp4` | H3 hype video: stands, walks in, double-biceps flex with dust, holds; end card; sound | 1344×768 24 fps, 13.2 s | Minimax H3 from `pitbull-road.png` + `scripts/endcard.sh` + `tools.sh join` |
-| `video/pitbull-announcement.mp4` | hype announcement video, 12.5 s, H.264, silent | 1920×1080 30 fps | `posters/video.html` recorded with `scripts/record_video.mjs` (Chromium + ffmpeg) |
+| `video/pitbull-hype.mp4` | H3 hype video: stands, walks in, double-biceps flex with dust, holds; sound, no end card | 1344×768 24 fps, 10 s | Minimax H3 from `pitbull-road.png` |
+| `geo/banner.png/.jpg` | X banner, Geocities style: cloud tile, faint tiled faces, WordArt title, Win95 bevel frames, NEW! burst, sparkles, visitor counter, construction stripes | 1500×500 | `geo/banner.html` + `geo/geo.css` (the style sheet the site will reuse), rendered with `scripts/render_poster.mjs` |
