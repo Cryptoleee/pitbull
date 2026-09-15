@@ -303,4 +303,5 @@ table.prophecy .st .unlocked { color: #008000; }
   .masthead .welcome { font-size: 17px; padding: 0 64px; }
   .masthead .title { margin-top: 6px; }
   .hero-cta .btn95 { width: 100%; max-width: 330px; }
+  .hero-cta .btn95.big, .soon .cta .btn95, .getrow .btn95.big { font-size: 18px; white-space: normal; }
 }
