@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="geo.css"><style>
+/* Token image for the Pons launch: the flexing creature on a gold sunburst. No text — the launchpad
+   prints the name and ticker beside it. Decoration is hand-placed so nothing clumps at the edges. */
+html, body { width: 1080px; height: 1080px; overflow: hidden; }
+.m { position: relative; width: 1080px; height: 1080px; overflow: hidden; background: radial-gradient(circle at 50% 46%, #fff3c4 0%, #ffd766 18%, #f5a92a 46%, #d07f12 72%, #8a4e06 100%); }
+.rays { position: absolute; inset: -30%; background: repeating-conic-gradient(from 0deg, rgba(255,247,200,.72) 0deg 5deg, rgba(255,247,200,0) 5deg 13deg); }
+.glow { position: absolute; inset: 0; background: radial-gradient(circle at 50% 44%, rgba(255,255,255,.5), rgba(255,255,255,0) 52%); }
+.vignette { position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 56%, rgba(90,45,0,.38) 100%); z-index: 8; }
+.fig { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); height: 93%; z-index: 5; filter: drop-shadow(0 18px 30px rgba(90,45,0,.4)) drop-shadow(0 0 44px rgba(255,235,170,.5)) saturate(1.08) contrast(1.04); }
+.d { position: absolute; display: grid; place-items: center; }
+.d.coin { border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff9c8, #ffd700 46%, #c98a00); border: 3px solid #7a5200; color: #7a5200; font-family: 'Anton', Impact, sans-serif; box-shadow: 4px 5px 0 rgba(120,70,0,.3); }
+.d.buck { font-family: 'Anton', Impact, sans-serif; color: #12b312; text-shadow: -3px -3px 0 #0b3d0b, 3px -3px 0 #0b3d0b, -3px 3px 0 #0b3d0b, 3px 3px 0 #0b3d0b, 5px 6px 0 rgba(0,0,0,.25); }
+.sp { position: absolute; width: 46px; height: 46px; transform: translate(-50%, -50%); background: radial-gradient(circle, #fff 0 4px, transparent 5px), conic-gradient(from 0deg, transparent 0 40deg, #fff 45deg, transparent 50deg, transparent 130deg, #fff 135deg, transparent 140deg, transparent 220deg, #fff 225deg, transparent 230deg, transparent 310deg, #fff 315deg, transparent 320deg); filter: drop-shadow(0 0 8px #fff8d0); }
+</style></head><body><div class="m">
+<div class="rays"></div><div class="glow"></div>
+
+<div class="d coin" style="left:19%; top:8%;  width:92px;  height:92px;  font-size:56px; transform:translate(-50%,-50%) rotate(-12deg); z-index:3">$</div>
+<div class="d coin" style="left:50%; top:5%;  width:74px;  height:74px;  font-size:46px; transform:translate(-50%,-50%) rotate(8deg);  z-index:3">$</div>
+<div class="d coin" style="left:81%; top:9%;  width:100px; height:100px; font-size:60px; transform:translate(-50%,-50%) rotate(14deg); z-index:3">$</div>
+<div class="d buck" style="left:7%;  top:27%; font-size:92px;  transform:translate(-50%,-50%) rotate(-16deg); z-index:3">$</div>
+<div class="d coin" style="left:93%; top:26%; width:84px;  height:84px;  font-size:52px; transform:translate(-50%,-50%) rotate(-9deg);  z-index:3">$</div>
+<div class="d coin" style="left:5%;  top:53%; width:104px; height:104px; font-size:64px; transform:translate(-50%,-50%) rotate(11deg);  z-index:6">$</div>
+<div class="d buck" style="left:95%; top:55%; font-size:100px; transform:translate(-50%,-50%) rotate(13deg);  z-index:6">$</div>
+<div class="d coin" style="left:9%;  top:79%; width:88px;  height:88px;  font-size:54px; transform:translate(-50%,-50%) rotate(-7deg);  z-index:6">$</div>
+<div class="d coin" style="left:91%; top:81%; width:96px;  height:96px;  font-size:58px; transform:translate(-50%,-50%) rotate(17deg);  z-index:6">$</div>
+<div class="d coin" style="left:50%; top:96%; width:70px;  height:70px;  font-size:44px; transform:translate(-50%,-50%) rotate(-5deg);  z-index:3">$</div>
+
+<img class="fig" src="flex-cutout.png">
+
+<div class="sp" style="left:31%; top:13%"></div>
+<div class="sp" style="left:70%; top:17%; width:34px; height:34px"></div>
+<div class="sp" style="left:14%; top:42%; width:36px; height:36px"></div>
+<div class="sp" style="left:88%; top:41%"></div>
+<div class="sp" style="left:26%; top:88%; width:32px; height:32px"></div>
+<div class="sp" style="left:76%; top:92%; width:38px; height:38px"></div>
+<div class="vignette"></div>
+</div></body></html>

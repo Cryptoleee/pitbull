@@ -40,3 +40,5 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `gif/w3-atm.gif/.mp4` | loop: WEALTHWIDE-ATM.EXE paying out forever, bills sliding out of the slot | 480×480 4 s | `geo/gif-w3-atm.html` |
 | `gif/w4-chart.gif/.mp4` | loop: CHART.EXE, candle wave that only goes up, "the chart watches him" | 480×480 4 s | `geo/gif-w4-chart.html` |
 | `gif/w5-dale.gif/.mp4` | loop: gold explosion, DALE. stamp, MR. WEALTHWIDE | 480×480 4 s | `geo/gif-w5-dale.html` |
+| `pons/pons-image.png/.jpg` | token image for the Pons launch form: the flexing creature on a gold sunburst, no text | 1080×1080 (+512 png) | `geo/pons-image.html` over `geo/flex-cutout.png` |
+| `geo/flex-cutout.png` | the flexing creature from the owner's reference, background removed, alpha-trimmed | 1868×1994 | Magnific background removal + `scripts/trim_alpha.mjs` |
