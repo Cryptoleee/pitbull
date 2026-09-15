@@ -19,7 +19,7 @@ memes and the video; `web/src/styles.css` is that style as the site.
 | Chain / launchpad | Robinhood Chain (4663) / Pons, native ETH pair |
 | Site | https://thepitbull.fun (Vercel) |
 | API / WebSocket | Railway, `server/` |
-| X | https://x.com/thepitbullfun (placeholder until the handle is claimed) |
+| X | https://x.com/PitbullEyooo |
 
 ```
 pitbull/
@@ -79,7 +79,7 @@ Optional project variables (Settings â†’ Environment Variables, then redeploy â€
 
 ```
 VITE_SITE_URL="https://thepitbull.fun"      # host shown on the stream frame (the og tags are absolute in index.html)
-VITE_X_URL="https://x.com/thepitbullfun"    # the X handle once it is claimed
+VITE_X_URL="https://x.com/PitbullEyooo"     # override only if the handle changes
 VITE_BUY_URL="https://www.ponsfamily.com"   # the Pons token page after launch
 VITE_WS_URL="wss://<railway-domain>/ws"     # at launch: connects the shrine to the chain watcher
 ```

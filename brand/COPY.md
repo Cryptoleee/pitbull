@@ -29,7 +29,7 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 Half Pitbull. Half pitbull. Half bull. All star. 🕶️🐂 The mythical creature that brings wealth. $PITBULL on Robinhood Chain via Pons. Dale.
 ```
 
-Name: `Pitbull ($PITBULL)` · Location: `A road nobody drives` · Website: `thepitbull.fun`
+Handle: `@PitbullEyooo` · Name: `Pitbull ($PITBULL)` · Location: `A road nobody drives` · Website: `thepitbull.fun`
 
 Pinned-post one-liner: `Eyoooo. He doesn't watch the chart. The chart watches him. 🐂🕶️ DALE.`
 
