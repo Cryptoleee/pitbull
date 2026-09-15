@@ -295,7 +295,7 @@ table.prophecy .st .unlocked { color: #008000; }
 @media (max-width: 640px) {
   .divider .spincoin { width: 40px; height: 40px; font-size: 24px; }
   .divider .marquee { display: none; }
-  .masthead .welcome { font-size: 17px; }
+  .masthead .welcome { font-size: 17px; padding: 0 64px; }
   .masthead .title { margin-top: 6px; }
   .hero-cta .btn95 { width: 100%; max-width: 330px; }
 }
