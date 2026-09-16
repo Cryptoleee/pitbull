@@ -30,6 +30,10 @@ Two rules that keep us out of trouble: never claim to be, or be endorsed by, any
 | Loop: ATM | `brand/gif/w3-atm.gif` |
 | Loop: chart | `brand/gif/w4-chart.gif` |
 | Loop: DALE explosion | `brand/gif/w5-dale.gif` |
+| Reaction: celebrate | `brand/gif/reactions/react-dale.gif` |
+| Reaction: point at you | `brand/gif/reactions/react-you.gif` |
+| Reaction: shrug | `brand/gif/reactions/react-shrug.gif` |
+| Reaction: no | `brand/gif/reactions/react-no.gif` |
 | Photoreal posters (pre-Geocities, still usable) | `brand/posters/post1-meet.jpg`, `post2-prophecy.jpg`, `post3-star.jpg` |
 
 ## Bio (138 chars)
@@ -325,7 +329,22 @@ Best viewed in Netscape Navigator 4.0 at 800x600. 😎
 $PITBULL via @ponsfamily · DALE.
 ```
 
-## 14. Reply / community lines (keep in the notes app)
+## 14. Reaction GIFs — when to fire which
+
+Four 5-second loops of the creature himself, same gold studio, made to answer replies with. Upload the
+`.mp4` where you can; the `.gif` is there for clients that want one.
+
+| GIF | Fire it at |
+|---|---|
+| `react-dale` — pumps the flex, laughs | green candles, a new holder, a milestone, "wagmi" |
+| `react-you` — points straight at you, nods | "how do I buy", tagging someone, "you're early" |
+| `react-shrug` — palms up, smirk | a dip, FUD, "it's down 30%", anything he can't be bothered by |
+| `react-no` — finger wag, head shake | "should I sell?", paperhands, scam accusations, bad advice |
+
+Line to pair with them, pick one: `dale.` · `eyoooo` · `horns up, familia 🐂` · `we don't sell.` ·
+`you were chosen.` · `the chart watches him.`
+
+## 15. Reply / community lines (keep in the notes app)
 
 - `DALE.`
 - `Eyoooo 🐂🕶️`

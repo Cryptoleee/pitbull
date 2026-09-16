@@ -42,3 +42,7 @@ gold (#e2a63a) on near-black (#0d0b08).
 | `gif/w5-dale.gif/.mp4` | loop: gold explosion, DALE. stamp, MR. WEALTHWIDE | 480×480 4 s | `geo/gif-w5-dale.html` |
 | `pons/pons-image.png/.jpg` | token image for the Pons launch form: the flexing creature on a gold sunburst, no text | 1080×1080 (+512 png) | `geo/pons-image.html` over `geo/flex-cutout.png` |
 | `geo/flex-cutout.png` | the flexing creature from the owner's reference, background removed, alpha-trimmed | 1868×1994 | Magnific background removal + `scripts/trim_alpha.mjs` |
+| `gif/reactions/react-dale.gif/.mp4` | reaction: pumps the flex, throws his head back laughing — for green candles and good news | 384×384 5 s | Minimax H3 from `pons/pons-image.png` + `scripts/togif.sh` |
+| `gif/reactions/react-you.gif/.mp4` | reaction: drops one arm and points straight at the camera, nods — for "you. buy." | 384×384 5 s | Minimax H3 |
+| `gif/reactions/react-shrug.gif/.mp4` | reaction: opens both arms, palms up, amused smirk — for dips and FUD | 384×384 5 s | Minimax H3 |
+| `gif/reactions/react-no.gif/.mp4` | reaction: finger wag and a slow head shake — for "no" and "don't sell" | 384×384 5 s | Minimax H3 |
